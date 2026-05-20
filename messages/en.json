@@ -76,6 +76,20 @@
       "usedSpace": "Used Space",
       "freeSpace": "Free Space",
       "required": "Required Power"
+    },
+    "pricing": {
+      "title": "Estimated Price",
+      "net": "net per month",
+      "tiers": {
+        "perU": "Single U pricing (12 €/U)",
+        "half": "Half rack (24U)",
+        "full": "Full rack (47U)"
+      },
+      "rates": {
+        "full": "Full rack (47U): {price} € net",
+        "half": "Half rack (24U): {price} € net",
+        "perU": "Single U: {price} € net each"
+      }
     }
   },
   "language": {

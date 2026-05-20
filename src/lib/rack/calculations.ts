@@ -1,11 +1,35 @@
 import {
   DEFAULT_NEEDED_UNITS,
   DEFAULT_POWER_KW,
+  FULL_RACK_PRICE_EUR,
+  HALF_RACK_PRICE_EUR,
+  HALF_RACK_UNITS,
+  PER_U_PRICE_EUR,
   RACK_HEIGHT_U,
+  type PriceQuote,
   type RackConfig,
   type RackSummary,
 } from "./types";
 import { generateId } from "../utils";
+
+/** Cheapest pricing tier that covers the requested units. */
+export function calculatePrice(neededUnits: number): PriceQuote {
+  const options: PriceQuote[] = [
+    { amountEur: neededUnits * PER_U_PRICE_EUR, tier: "perU" },
+  ];
+
+  if (neededUnits <= HALF_RACK_UNITS) {
+    options.push({ amountEur: HALF_RACK_PRICE_EUR, tier: "half" });
+  }
+
+  if (neededUnits <= RACK_HEIGHT_U) {
+    options.push({ amountEur: FULL_RACK_PRICE_EUR, tier: "full" });
+  }
+
+  return options.reduce((best, option) =>
+    option.amountEur < best.amountEur ? option : best,
+  );
+}
 
 /** Bottom U position where allocated space starts, centered in the rack. */
 export function getAllocatedStartU(neededUnits: number): number {
@@ -31,6 +55,7 @@ export function calculateRackSummary(rack: RackConfig): RackSummary {
     powerKw: rack.powerKw,
     uUtilizationPercent:
       RACK_HEIGHT_U > 0 ? Math.round((usedU / RACK_HEIGHT_U) * 100) : 0,
+    pricing: calculatePrice(usedU),
   };
 }
 

@@ -76,6 +76,20 @@
       "usedSpace": "Belegter Platz",
       "freeSpace": "Freier Platz",
       "required": "Benötigter Strom"
+    },
+    "pricing": {
+      "title": "Geschätzter Preis",
+      "net": "netto pro Monat",
+      "tiers": {
+        "perU": "Einzel-U-Preis (12 €/U)",
+        "half": "Half Rack (24U)",
+        "full": "Full Rack (47U)"
+      },
+      "rates": {
+        "full": "Full Rack (47U): {price} € netto",
+        "half": "Half Rack (24U): {price} € netto",
+        "perU": "Einzel-U: {price} € netto je U"
+      }
     }
   },
   "language": {

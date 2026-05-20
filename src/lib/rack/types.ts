@@ -10,9 +10,21 @@ export type RackSummary = {
   freeU: number;
   powerKw: number;
   uUtilizationPercent: number;
+  pricing: PriceQuote;
+};
+
+export type PricingTier = "perU" | "half" | "full";
+
+export type PriceQuote = {
+  amountEur: number;
+  tier: PricingTier;
 };
 
 export const RACK_HEIGHT_U = 47;
+export const HALF_RACK_UNITS = 24;
+export const FULL_RACK_PRICE_EUR = 350;
+export const HALF_RACK_PRICE_EUR = 225;
+export const PER_U_PRICE_EUR = 12;
 export const SLOT_HEIGHT_PX = 11;
 export const DEFAULT_NEEDED_UNITS = 10;
 export const DEFAULT_POWER_KW = 5;
