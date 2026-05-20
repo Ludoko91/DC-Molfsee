@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "title": "Your Datacenter — Enterprise Colocation",
+    "description": "Planen Sie Ihren Rackplatz und Strombedarf mit unserem interaktiven Rechenzentrum-Konfigurator."
+  },
+  "nav": {
+    "home": "Startseite",
+    "configure": "Konfigurieren",
+    "brand": "Your Datacenter"
+  },
+  "footer": {
+    "copyright": "© {year} Your Datacenter. Alle Rechte vorbehalten.",
+    "contact": "Kontakt: info@yourdatacenter.com"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Enterprise Colocation",
+      "title": "Zuverlässige Infrastruktur für Ihre kritischen Workloads",
+      "subtitle": "Planen Sie Ihre Colocation-Kapazität präzise. Konfigurieren Sie Rack-Einheiten und Strombudgets mit interaktiven Schiebereglern.",
+      "cta": "Rack konfigurieren",
+      "secondary": "Mehr erfahren"
+    },
+    "features": {
+      "title": "Warum wir",
+      "subtitle": "Für geschäftskritische Betriebe mit Redundanz auf jeder Ebene.",
+      "power": {
+        "title": "Redundante Stromversorgung",
+        "description": "Doppelte Stromzuführung mit N+1-USV und Generator-Backup für unterbrechungsfreien Betrieb."
+      },
+      "connectivity": {
+        "title": "Premium-Konnektivität",
+        "description": "Carrier-neutrales Rechenzentrum mit latenzarmen Cross-Connects und diversen Glasfaserwegen."
+      },
+      "security": {
+        "title": "Physische Sicherheit",
+        "description": "24/7 Personal vor Ort, biometrische Zutrittskontrolle und CCTV-Überwachung."
+      },
+      "support": {
+        "title": "24/7 Betrieb",
+        "description": "Remote-Hands-Support und proaktives Monitoring rund um die Uhr."
+      }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Infrastruktur zu planen?",
+      "subtitle": "Nutzen Sie unseren visuellen Rack-Builder, um Equipment, U-Platz und Strombedarf vor dem Einzug zu planen.",
+      "button": "Rack-Builder öffnen"
+    }
+  },
+  "configure": {
+    "title": "Rack- & Strom-Konfigurator",
+    "subtitle": "Konfigurieren Sie benötigte Rack-Einheiten und Strom per Schieberegler.",
+    "sliders": {
+      "title": "Konfiguration",
+      "hint": "Legen Sie benötigte Rack-Einheiten und Strom fest",
+      "neededUnits": "Benötigte Rack-Einheiten",
+      "power": "Benötigter Strom"
+    },
+    "rack": {
+      "title": "Rack-Layout",
+      "add": "Rack hinzufügen",
+      "remove": "Rack entfernen",
+      "clear": "Zurücksetzen",
+      "selectRack": "Rack auswählen",
+      "units": "{height}U",
+      "fixedHeight": "Standard-Rack: {height}U",
+      "schematic": "Frontansicht — vollständiges 47U Gehäuse",
+      "schematicCentered": "Colocation bei U{start}–U{end} (zentriert im Rack)",
+      "cabinetLabel": "{height}U Rack",
+      "top": "Oben",
+      "bottom": "U1",
+      "allocated": "{units}U Colocation"
+    },
+    "power": {
+      "title": "Übersicht",
+      "budgetUnit": "kW",
+      "usedSpace": "Belegter Platz",
+      "freeSpace": "Freier Platz",
+      "required": "Benötigter Strom"
+    }
+  },
+  "language": {
+    "en": "English",
+    "de": "Deutsch"
+  }
+}

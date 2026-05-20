@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "title": "Your Datacenter — Enterprise Colocation",
+    "description": "Plan your rack space and power requirements with our interactive datacenter configurator."
+  },
+  "nav": {
+    "home": "Home",
+    "configure": "Configure",
+    "brand": "Your Datacenter"
+  },
+  "footer": {
+    "copyright": "© {year} Your Datacenter. All rights reserved.",
+    "contact": "Contact: info@yourdatacenter.com"
+  },
+  "landing": {
+    "hero": {
+      "badge": "Enterprise Colocation",
+      "title": "Reliable infrastructure for your critical workloads",
+      "subtitle": "Plan your colocation footprint with precision. Configure rack units and power budgets using interactive sliders.",
+      "cta": "Configure Your Rack",
+      "secondary": "Learn more"
+    },
+    "features": {
+      "title": "Why choose us",
+      "subtitle": "Built for mission-critical operations with redundancy at every layer.",
+      "power": {
+        "title": "Redundant Power",
+        "description": "Dual power feeds with N+1 UPS and generator backup for uninterrupted operations."
+      },
+      "connectivity": {
+        "title": "Premium Connectivity",
+        "description": "Carrier-neutral facility with low-latency cross-connects and diverse fiber paths."
+      },
+      "security": {
+        "title": "Physical Security",
+        "description": "24/7 on-site staff, biometric access control, and CCTV monitoring throughout."
+      },
+      "support": {
+        "title": "24/7 Operations",
+        "description": "Remote hands support and proactive monitoring around the clock."
+      }
+    },
+    "cta": {
+      "title": "Ready to plan your deployment?",
+      "subtitle": "Use our visual rack builder to map out your equipment, U-space, and power requirements before you move in.",
+      "button": "Open Rack Builder"
+    }
+  },
+  "configure": {
+    "title": "Rack & Power Configurator",
+    "subtitle": "Use the sliders to configure your required rack units and power.",
+    "sliders": {
+      "title": "Configuration",
+      "hint": "Set how many rack units and how much power you need",
+      "neededUnits": "Required Rack Units",
+      "power": "Required Power"
+    },
+    "rack": {
+      "title": "Rack Layout",
+      "add": "Add Rack",
+      "remove": "Remove Rack",
+      "clear": "Reset",
+      "selectRack": "Select rack",
+      "units": "{height}U",
+      "fixedHeight": "Standard rack: {height}U",
+      "schematic": "Front elevation — full 47U cabinet",
+      "schematicCentered": "Colocation at U{start}–U{end} (centered in rack)",
+      "cabinetLabel": "{height}U Rack",
+      "top": "Top",
+      "bottom": "U1",
+      "allocated": "{units}U colocation"
+    },
+    "power": {
+      "title": "Summary",
+      "budgetUnit": "kW",
+      "usedSpace": "Used Space",
+      "freeSpace": "Free Space",
+      "required": "Required Power"
+    }
+  },
+  "language": {
+    "en": "English",
+    "de": "Deutsch"
+  }
+}
