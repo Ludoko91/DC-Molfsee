@@ -150,6 +150,8 @@
       "neededUnits": "Benötigte Rack-Einheiten",
       "powerSection": "Strom",
       "maxPower": "Max. Leistung",
+      "powerFeeds": "Stromzuführungen",
+      "powerFeedsHint": "{free} Zufuhr inklusive · je Zufuhr {kw} kW · weitere {price} € / Monat",
       "totalPower": "Gesamtverbrauch",
       "powerCostHint": "Abrechnung mit {price} € pro kWh"
     },
@@ -177,17 +179,24 @@
       "title": "Übersicht",
       "kwUnit": "kW",
       "kwhUnit": "kWh",
+      "feedsUnit": "Zuführungen",
       "usedSpace": "Belegter Platz",
       "freeSpace": "Freier Platz",
       "maxPower": "Max. Leistung",
-      "totalPower": "Gesamtverbrauch"
+      "totalPower": "Gesamtverbrauch",
+      "powerFeeds": "Stromzuführungen"
     },
     "overview": {
       "title": "Gesamtkonfiguration",
       "subtitle": "{count, plural, one {# Rack konfiguriert} other {# Racks konfiguriert}}",
       "grandTotal": "Gesamt monatlich",
       "rackTotal": "Alle Rackplätze",
-      "powerTotal": "Gesamter Strom"
+      "powerTotal": "Gesamter Strom",
+      "feedsTotal": "Alle Stromzuführungen",
+      "contactButton": "Kontakt aufnehmen",
+      "email": {
+        "hint": "Führt zu einem Kontaktformular mit deiner aktuellen Konfiguration."
+      }
     },
     "pricing": {
       "title": "Geschätzter Preis",
@@ -196,6 +205,8 @@
       "rackLine": "Rackplatz",
       "powerLine": "Strom",
       "powerCalc": "{kwh} kWh × {price} €/kWh",
+      "feedsLine": "Stromzuführungen",
+      "feedsCalc": "{feeds} × {kw} kW (erste {free} inklusive) · {price} € / weitere Zufuhr",
       "tiers": {
         "perU": "Einzel-U-Preis (12 €/U)",
         "half": "Half Rack (24U)",
@@ -212,5 +223,86 @@
   "language": {
     "en": "English",
     "de": "Deutsch"
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt — Rack-Konfiguration",
+      "description": "Sende uns deine Daten und deine ausgewählte Rack-Konfiguration."
+    },
+    "eyebrow": "Kontakt",
+    "title": "Konfiguration senden",
+    "subtitle": "Trage deine Daten ein — wir erzeugen eine versandfertige E-Mail inklusive deiner Rack- und Strom-Konfiguration.",
+    "missingConfig": {
+      "title": "Keine Konfiguration übergeben",
+      "body": "Bitte gehe zurück in den Konfigurator und klicke dort auf „Kontakt aufnehmen“, damit wir deine Auswahl übernehmen können."
+    },
+    "summary": {
+      "title": "Konfigurationsübersicht",
+      "hint": "Nur-lese Vorschau deiner Auswahl.",
+      "empty": "Keine Konfiguration gefunden."
+    },
+    "form": {
+      "title": "Deine Daten",
+      "hint": "Pflichtfelder werden per Validierung markiert.",
+      "email": "E-Mail",
+      "emailPlaceholder": "du@beispiel.de",
+      "role": "Rolle",
+      "rolePlaceholder": "Rolle auswählen",
+      "name": "Name",
+      "required": "Pflichtfeld",
+      "namePlaceholder": "Dein Name",
+      "company": "Firma (optional)",
+      "companyPlaceholder": "Firma / Organisation",
+      "phone": "Telefon (optional)",
+      "phonePlaceholder": "+49 …",
+      "message": "Nachricht (optional)",
+      "messagePlaceholder": "Gibt es noch etwas, das wir wissen sollten?",
+      "submit": "E-Mail erzeugen",
+      "submitSending": "Senden…",
+      "configSource": "Quelle der Konfiguration: {source}",
+      "configSourceQuery": "URL",
+      "configSourceSession": "Dieses Gerät",
+      "configSourceMissing": "fehlt",
+      "errors": {
+        "required": "Pflichtfeld",
+        "invalidEmail": "Bitte eine gültige E-Mail-Adresse eingeben"
+      }
+    },
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "engineer": "Engineer",
+      "student": "Student",
+      "other": "Sonstiges"
+    },
+    "email": {
+      "subject": "Anfrage zur Rack-Konfiguration ({count, plural, one {# Rack} other {# Racks}})",
+      "greeting": "Hallo Datacenter Molfsee-Team,",
+      "detailsHeader": "Kontaktdaten",
+      "messageHeader": "Nachricht",
+      "noMessage": "(keine Nachricht)",
+      "configHeader": "Konfiguration",
+      "fields": {
+        "email": "E-Mail",
+        "role": "Rolle",
+        "name": "Name",
+        "company": "Firma",
+        "phone": "Telefon"
+      }
+    },
+    "success": {
+      "title": "Versandbereit",
+      "body": "Kopiere den E-Mail-Text oder öffne dein E-Mail-Programm.",
+      "bodyServer": "Erfolgreich gesendet. Du kannst den Text trotzdem kopieren oder dein E-Mail-Programm öffnen.",
+      "copy": "E-Mail kopieren",
+      "copied": "Kopiert",
+      "copyFailed": "Kopieren fehlgeschlagen",
+      "openMail": "E-Mail-Programm öffnen"
+    },
+    "error": {
+      "title": "Automatischer Versand fehlgeschlagen",
+      "body": "Du kannst den E-Mail-Text trotzdem kopieren oder dein E-Mail-Programm als Fallback öffnen.",
+      "network": "Netzwerkfehler. Bitte erneut versuchen."
+    }
   }
 }

@@ -4,6 +4,7 @@ export type RackConfig = {
   neededUnits: number;
   maxPowerKw: number;
   totalPowerKwh: number;
+  powerFeeds: number;
 };
 
 export type RackSummary = {
@@ -12,6 +13,8 @@ export type RackSummary = {
   maxPowerKw: number;
   totalPowerKwh: number;
   powerCostEur: number;
+  powerFeeds: number;
+  feedsCostEur: number;
   uUtilizationPercent: number;
   pricing: PriceQuote;
   totalMonthlyEur: number;
@@ -29,6 +32,7 @@ export type RackPriceLine = {
   name: string;
   rackCostEur: number;
   powerCostEur: number;
+  feedsCostEur: number;
   totalMonthlyEur: number;
 };
 
@@ -36,6 +40,7 @@ export type TotalSummary = {
   rackCount: number;
   totalRackCostEur: number;
   totalPowerCostEur: number;
+  totalFeedsCostEur: number;
   totalPowerKwh: number;
   totalMonthlyEur: number;
   racks: RackPriceLine[];
@@ -47,10 +52,13 @@ export const FULL_RACK_PRICE_EUR = 300;
 export const HALF_RACK_PRICE_EUR = 180;
 export const PER_U_PRICE_EUR = 12;
 export const POWER_PRICE_EUR_PER_KWH = 0.33;
+export const POWER_FEED_KW = 3.8;
+export const POWER_FEED_EXTRA_PRICE_EUR = 200;
 export const SLOT_HEIGHT_PX = 14;
 export const DEFAULT_NEEDED_UNITS = 10;
 export const DEFAULT_MAX_POWER_KW = 5;
 export const DEFAULT_TOTAL_POWER_KWH = 500;
+export const DEFAULT_POWER_FEEDS = 2;
 export const MIN_NEEDED_UNITS = 1;
 export const MAX_NEEDED_UNITS = 47;
 export const MIN_MAX_POWER_KW = 0.5;
