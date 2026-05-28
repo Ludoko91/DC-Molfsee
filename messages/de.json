@@ -16,7 +16,32 @@
   "footer": {
     "tagline": "Datacenter Molfsee · betrieben von Menschen, die wissen, wo das Backup liegt.",
     "copyright": "© {year} Datacenter Molfsee. Alle Rechte vorbehalten.",
-    "contact": "info@datacenter-molfsee.de"
+    "contact": "info@datacenter-molfsee.de",
+    "impressum": "Impressum"
+  },
+  "impressum": {
+    "meta": {
+      "title": "Impressum",
+      "description": "Anbieterkennzeichnung und Kontaktinformationen."
+    },
+    "eyebrow": "Rechtliches",
+    "title": "Impressum",
+    "provider": {
+      "title": "Anbieter",
+      "body": "Datacenter Molfsee · Rendsburger Landstraße 142 · 24113 Molfsee · Deutschland"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "body": "E-Mail: info@datacenter-molfsee.de"
+    },
+    "vat": {
+      "title": "USt-IdNr.",
+      "body": "USt-IdNr.: (folgt)"
+    },
+    "disclaimer": {
+      "title": "Haftungshinweis",
+      "body": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+    }
   },
   "landing": {
     "hero": {
@@ -37,7 +62,7 @@
     "facility": {
       "eyebrow": "Die Anlage",
       "title": "Klein genug, dass wir dich beim Namen kennen.",
-      "lede": "Drei Räume, sieben Reihen, ehrliche Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind der, der dich am Telefon erkennt.",
+      "lede": "Ein Raum mit 11 Racks, ehrliche Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind der, der dich am Telefon erkennt.",
       "cards": {
         "power": {
           "tag": "Strom",

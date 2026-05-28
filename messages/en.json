@@ -16,7 +16,32 @@
   "footer": {
     "tagline": "Datacenter Molfsee · run by people who know where the backup lives.",
     "copyright": "© {year} Datacenter Molfsee. All rights reserved.",
-    "contact": "info@datacenter-molfsee.de"
+    "contact": "info@datacenter-molfsee.de",
+    "impressum": "Impressum"
+  },
+  "impressum": {
+    "meta": {
+      "title": "Impressum",
+      "description": "Legal notice and contact information."
+    },
+    "eyebrow": "Legal",
+    "title": "Impressum",
+    "provider": {
+      "title": "Service provider",
+      "body": "Datacenter Molfsee · Rendsburger Landstraße 142 · 24113 Molfsee · Germany"
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "Email: info@datacenter-molfsee.de"
+    },
+    "vat": {
+      "title": "VAT ID",
+      "body": "VAT ID: (to be provided)"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "body": "Despite careful control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+    }
   },
   "landing": {
     "hero": {
@@ -37,7 +62,7 @@
     "facility": {
       "eyebrow": "The facility",
       "title": "Small enough that we know your name.",
-      "lede": "Three rooms, seven rows, honest engineering. We're not Northern Germany's biggest data center — we're the one that picks up the phone.",
+      "lede": "One room with 11 racks, honest engineering. We're not Northern Germany's biggest data center — we're the one that picks up the phone.",
       "cards": {
         "power": {
           "tag": "Power",

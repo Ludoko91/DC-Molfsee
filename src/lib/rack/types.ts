@@ -43,11 +43,11 @@ export type TotalSummary = {
 
 export const RACK_HEIGHT_U = 47;
 export const HALF_RACK_UNITS = 24;
-export const FULL_RACK_PRICE_EUR = 350;
-export const HALF_RACK_PRICE_EUR = 225;
+export const FULL_RACK_PRICE_EUR = 300;
+export const HALF_RACK_PRICE_EUR = 180;
 export const PER_U_PRICE_EUR = 12;
 export const POWER_PRICE_EUR_PER_KWH = 0.33;
-export const SLOT_HEIGHT_PX = 11;
+export const SLOT_HEIGHT_PX = 14;
 export const DEFAULT_NEEDED_UNITS = 10;
 export const DEFAULT_MAX_POWER_KW = 5;
 export const DEFAULT_TOTAL_POWER_KWH = 500;
