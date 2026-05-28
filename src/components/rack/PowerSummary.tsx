@@ -6,9 +6,11 @@ import {
   FULL_RACK_PRICE_EUR,
   HALF_RACK_PRICE_EUR,
   PER_U_PRICE_EUR,
+  POWER_PRICE_EUR_PER_KWH,
   RACK_HEIGHT_U,
   type RackConfig,
 } from "@/lib/rack/types";
+import { formatEur } from "@/lib/format";
 import { cn } from "@/lib/utils";
 
 type Props = {
@@ -17,22 +19,13 @@ type Props = {
 
 function UtilizationBar({ percent }: { percent: number }) {
   return (
-    <div className="h-2 overflow-hidden rounded-full bg-slate-800">
+    <div className="h-2 overflow-hidden rounded-full bg-[var(--background-3)]">
       <div
         className={cn("h-full rounded-full bg-success transition-all")}
         style={{ width: `${Math.min(percent, 100)}%` }}
       />
     </div>
   );
-}
-
-function formatEur(amount: number, locale: string): string {
-  return new Intl.NumberFormat(locale, {
-    style: "currency",
-    currency: "EUR",
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 2,
-  }).format(amount);
 }
 
 export function PowerSummary({ rack }: Props) {
@@ -43,26 +36,23 @@ export function PowerSummary({ rack }: Props) {
 
   return (
     <aside className="rounded-xl border border-card-border bg-card/50 p-4">
-      <h2 className="font-semibold text-white">{t("power.title")}</h2>
+      <h2 className="font-semibold text-foreground">{t("power.title")}</h2>
       <p className="mt-1 text-xs text-muted">{rack.name}</p>
 
       <div className="mt-6 rounded-lg border border-accent/30 bg-accent/10 p-4">
         <p className="text-xs font-medium uppercase tracking-wider text-accent">
-          {t("pricing.title")}
+          {t("pricing.totalTitle")}
         </p>
-        <p className="mt-2 text-2xl font-bold text-white">
-          {formatEur(summary.pricing.amountEur, numberLocale)}
+        <p className="mt-2 text-2xl font-bold text-foreground">
+          {formatEur(summary.totalMonthlyEur, numberLocale)}
         </p>
         <p className="mt-1 text-xs text-muted">{t("pricing.net")}</p>
-        <p className="mt-2 text-sm text-foreground">
-          {t(`pricing.tiers.${summary.pricing.tier}`)}
-        </p>
       </div>
 
       <dl className="mt-6 space-y-4">
         <div>
           <dt className="text-xs text-muted">{t("power.usedSpace")}</dt>
-          <dd className="mt-1 text-lg font-semibold text-white">
+          <dd className="mt-1 text-lg font-semibold text-foreground">
             {summary.usedU}U / {RACK_HEIGHT_U}U
           </dd>
           <UtilizationBar percent={summary.uUtilizationPercent} />
@@ -70,21 +60,52 @@ export function PowerSummary({ rack }: Props) {
 
         <div>
           <dt className="text-xs text-muted">{t("power.freeSpace")}</dt>
-          <dd className="mt-1 text-lg font-semibold text-white">{summary.freeU}U</dd>
+          <dd className="mt-1 text-lg font-semibold text-foreground">{summary.freeU}U</dd>
         </div>
 
         <div>
-          <dt className="text-xs text-muted">{t("power.required")}</dt>
-          <dd className="mt-1 text-lg font-semibold text-white">
-            {summary.powerKw.toFixed(1)} {t("power.budgetUnit")}
+          <dt className="text-xs text-muted">{t("power.maxPower")}</dt>
+          <dd className="mt-1 text-lg font-semibold text-foreground">
+            {summary.maxPowerKw.toFixed(1)} {t("power.kwUnit")}
+          </dd>
+        </div>
+
+        <div>
+          <dt className="text-xs text-muted">{t("power.totalPower")}</dt>
+          <dd className="mt-1 text-lg font-semibold text-foreground">
+            {summary.totalPowerKwh} {t("power.kwhUnit")}
           </dd>
         </div>
       </dl>
+
+      <div className="mt-6 space-y-3 border-t border-card-border pt-4 text-sm">
+        <div className="flex justify-between gap-4">
+          <span className="text-muted">{t("pricing.rackLine")}</span>
+          <span className="font-medium text-foreground">
+            {formatEur(summary.pricing.amountEur, numberLocale)}
+          </span>
+        </div>
+        <p className="text-xs text-muted">{t(`pricing.tiers.${summary.pricing.tier}`)}</p>
+
+        <div className="flex justify-between gap-4">
+          <span className="text-muted">{t("pricing.powerLine")}</span>
+          <span className="font-medium text-foreground">
+            {formatEur(summary.powerCostEur, numberLocale)}
+          </span>
+        </div>
+        <p className="text-xs text-muted">
+          {t("pricing.powerCalc", {
+            kwh: summary.totalPowerKwh,
+            price: POWER_PRICE_EUR_PER_KWH,
+          })}
+        </p>
+      </div>
 
       <div className="mt-6 space-y-2 border-t border-card-border pt-4 text-xs text-muted">
         <p>{t("pricing.rates.full", { price: FULL_RACK_PRICE_EUR })}</p>
         <p>{t("pricing.rates.half", { price: HALF_RACK_PRICE_EUR })}</p>
         <p>{t("pricing.rates.perU", { price: PER_U_PRICE_EUR })}</p>
+        <p>{t("pricing.rates.power", { price: POWER_PRICE_EUR_PER_KWH })}</p>
       </div>
     </aside>
   );

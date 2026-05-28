@@ -2,18 +2,24 @@
 
 import { useTranslations } from "next-intl";
 import {
+  MAX_MAX_POWER_KW,
   MAX_NEEDED_UNITS,
-  MAX_POWER_KW,
+  MAX_TOTAL_POWER_KWH,
+  MIN_MAX_POWER_KW,
   MIN_NEEDED_UNITS,
-  MIN_POWER_KW,
+  MIN_TOTAL_POWER_KWH,
+  POWER_PRICE_EUR_PER_KWH,
   RACK_HEIGHT_U,
   type RackConfig,
 } from "@/lib/rack/types";
+import { cn } from "@/lib/utils";
 
 type Props = {
   rack: RackConfig;
+  disabled?: boolean;
   onSetNeededUnits: (units: number) => void;
-  onSetPowerKw: (powerKw: number) => void;
+  onSetMaxPowerKw: (maxPowerKw: number) => void;
+  onSetTotalPowerKwh: (totalPowerKwh: number) => void;
 };
 
 function ConfigSlider({
@@ -23,6 +29,8 @@ function ConfigSlider({
   max,
   step = 1,
   unit,
+  hint,
+  disabled,
   onChange,
 }: {
   label: string;
@@ -31,10 +39,12 @@ function ConfigSlider({
   max: number;
   step?: number;
   unit?: string;
+  hint?: string;
+  disabled?: boolean;
   onChange: (value: number) => void;
 }) {
   return (
-    <div className="space-y-2">
+    <div className={cn("space-y-2", disabled && "opacity-50")}>
       <div className="flex items-center justify-between text-sm">
         <span className="text-foreground">{label}</span>
         <span className="font-mono text-accent">
@@ -49,25 +59,35 @@ function ConfigSlider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-slate-800 accent-accent"
+        disabled={disabled}
+        className="h-2 w-full cursor-pointer appearance-none rounded-full bg-[var(--background-3)] accent-accent disabled:cursor-not-allowed"
       />
+      {hint && <p className="text-[11px] text-muted">{hint}</p>}
     </div>
   );
 }
 
 export function ConfigurationSliders({
   rack,
+  disabled = false,
   onSetNeededUnits,
-  onSetPowerKw,
+  onSetMaxPowerKw,
+  onSetTotalPowerKwh,
 }: Props) {
   const t = useTranslations("configure");
 
   return (
     <aside className="space-y-6 rounded-xl border border-card-border bg-card/50 p-4">
       <div>
-        <h2 className="font-semibold text-white">{t("sliders.title")}</h2>
+        <h2 className="font-semibold text-foreground">{t("sliders.title")}</h2>
         <p className="mt-1 text-xs text-muted">{t("sliders.hint")}</p>
       </div>
+
+      {disabled && (
+        <p className="rounded-lg border border-warning/30 bg-warning/10 px-3 py-2 text-xs text-warning">
+          {t("rack.lockedHint", { units: RACK_HEIGHT_U })}
+        </p>
+      )}
 
       <div className="rounded-lg border border-card-border bg-card px-3 py-2 text-sm text-muted">
         {t("rack.fixedHeight", { height: RACK_HEIGHT_U })}
@@ -79,18 +99,38 @@ export function ConfigurationSliders({
         min={MIN_NEEDED_UNITS}
         max={MAX_NEEDED_UNITS}
         unit="U"
+        disabled={disabled}
         onChange={onSetNeededUnits}
       />
 
-      <ConfigSlider
-        label={t("sliders.power")}
-        value={rack.powerKw}
-        min={MIN_POWER_KW}
-        max={MAX_POWER_KW}
-        step={0.5}
-        unit={t("power.budgetUnit")}
-        onChange={onSetPowerKw}
-      />
+      <div className="space-y-4 border-t border-card-border pt-4">
+        <p className="text-xs font-medium uppercase tracking-wider text-muted">
+          {t("sliders.powerSection")}
+        </p>
+
+        <ConfigSlider
+          label={t("sliders.maxPower")}
+          value={rack.maxPowerKw}
+          min={MIN_MAX_POWER_KW}
+          max={MAX_MAX_POWER_KW}
+          step={0.5}
+          unit={t("power.kwUnit")}
+          disabled={disabled}
+          onChange={onSetMaxPowerKw}
+        />
+
+        <ConfigSlider
+          label={t("sliders.totalPower")}
+          value={rack.totalPowerKwh}
+          min={MIN_TOTAL_POWER_KWH}
+          max={MAX_TOTAL_POWER_KWH}
+          step={10}
+          unit={t("power.kwhUnit")}
+          hint={t("sliders.powerCostHint", { price: POWER_PRICE_EUR_PER_KWH })}
+          disabled={disabled}
+          onChange={onSetTotalPowerKwh}
+        />
+      </div>
     </aside>
   );
 }

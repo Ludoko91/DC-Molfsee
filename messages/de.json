@@ -1,49 +1,119 @@
 {
   "metadata": {
-    "title": "Your Datacenter — Enterprise Colocation",
-    "description": "Planen Sie Ihren Rackplatz und Strombedarf mit unserem interaktiven Rechenzentrum-Konfigurator."
+    "title": "Datacenter Molfsee — Bezahlbarer Rackplatz für Homelabs",
+    "description": "Colocation in Molfsee, Schleswig-Holstein. Rack-Einheiten und Strom mit transparenten Netto-Preisen konfigurieren."
   },
   "nav": {
     "home": "Startseite",
     "configure": "Konfigurieren",
-    "brand": "Your Datacenter"
+    "facility": "Anlage",
+    "pricing": "Preise",
+    "location": "Standort",
+    "book": "Rack buchen",
+    "brand": "Datacenter Molfsee",
+    "coords": "54.27° N · 10.10° E"
   },
   "footer": {
-    "copyright": "© {year} Your Datacenter. Alle Rechte vorbehalten.",
-    "contact": "Kontakt: info@yourdatacenter.com"
+    "tagline": "Datacenter Molfsee · betrieben von Menschen, die wissen, wo das Backup liegt.",
+    "copyright": "© {year} Datacenter Molfsee. Alle Rechte vorbehalten.",
+    "contact": "info@datacenter-molfsee.de"
   },
   "landing": {
     "hero": {
-      "badge": "Enterprise Colocation",
-      "title": "Zuverlässige Infrastruktur für Ihre kritischen Workloads",
-      "subtitle": "Planen Sie Ihre Colocation-Kapazität präzise. Konfigurieren Sie Rack-Einheiten und Strombudgets mit interaktiven Schiebereglern.",
-      "cta": "Rack konfigurieren",
-      "secondary": "Mehr erfahren"
+      "eyebrow": "Tier 2/3 Colocation · Molfsee, Schleswig-Holstein",
+      "title1": "Bezahlbarer",
+      "title2": "Rackplatz",
+      "title3": "für Homelabs.",
+      "lede": "Wir betreiben einen kleinen, ehrlichen Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
+      "cta": "Platz konfigurieren",
+      "secondary": "Preise ansehen",
+      "stats": {
+        "facility": { "label": "Anlage", "value": "Tier 2/3" },
+        "location": { "label": "Standort", "value": "Molfsee · DE" },
+        "available": { "label": "Verfügbar", "value": "47 HE / Rack" },
+        "from": { "label": "Ab", "value": "12 € / HE" }
+      }
     },
-    "features": {
-      "title": "Warum wir",
-      "subtitle": "Für geschäftskritische Betriebe mit Redundanz auf jeder Ebene.",
-      "power": {
-        "title": "Redundante Stromversorgung",
-        "description": "Doppelte Stromzuführung mit N+1-USV und Generator-Backup für unterbrechungsfreien Betrieb."
+    "facility": {
+      "eyebrow": "Die Anlage",
+      "title": "Klein genug, dass wir dich beim Namen kennen.",
+      "lede": "Drei Räume, sieben Reihen, ehrliche Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind der, der dich am Telefon erkennt.",
+      "cards": {
+        "power": {
+          "tag": "Strom",
+          "value": "A+B Feeds",
+          "note": "Redundante Einspeisung, USV-gepuffert, Diesel-Backup für 36 Stunden Volllast."
+        },
+        "cooling": {
+          "tag": "Kühlung",
+          "value": "Kalt/Warm-Gang",
+          "note": "22 °C Vorlauf, freie Kühlung 8 Monate im Jahr — Schleswig-Holstein sei Dank."
+        },
+        "network": {
+          "tag": "Netzwerk",
+          "value": "Dual-Carrier",
+          "note": "10 Gbit/s Uplinks, BGP-fähig, DE-CIX Hamburg via dunkler Faser."
+        },
+        "access": {
+          "tag": "Zutritt",
+          "value": "24/7",
+          "note": "Schlüsselkarte, Mantrap, Videoaufzeichnung. Remote Hands auf Anfrage."
+        }
+      }
+    },
+    "pricing": {
+      "eyebrow": "Preise",
+      "title": "Drei Zahlen. Mehr nicht.",
+      "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten und Strom — alle Preise netto.",
+      "month": "Monat",
+      "tiers": {
+        "perU": {
+          "size": "1 HE",
+          "note": "Ideal für einen einzelnen Server, NAS oder Firewall."
+        },
+        "half": {
+          "size": "Half Rack · 24 HE",
+          "note": "Genug für den eigenen kleinen Cluster."
+        },
+        "full": {
+          "size": "Full Rack · 47 HE",
+          "note": "Eigene PDU, eigener Schlüssel."
+        }
       },
-      "connectivity": {
-        "title": "Premium-Konnektivität",
-        "description": "Carrier-neutrales Rechenzentrum mit latenzarmen Cross-Connects und diversen Glasfaserwegen."
+      "extras": {
+        "power": {
+          "label": "Strom",
+          "value": "Konfigurierbar",
+          "note": "kW-Bedarf im Konfigurator festlegen"
+        },
+        "bandwidth": {
+          "label": "Bandbreite",
+          "value": "ab 5 € / Monat",
+          "note": "100 Mbit/s flat, höhere Stufen auf Anfrage"
+        },
+        "ipv4": {
+          "label": "IPv4",
+          "value": "2 € / Adresse",
+          "note": "IPv6 /64 inklusive"
+        }
       },
-      "security": {
-        "title": "Physische Sicherheit",
-        "description": "24/7 Personal vor Ort, biometrische Zutrittskontrolle und CCTV-Überwachung."
-      },
-      "support": {
-        "title": "24/7 Betrieb",
-        "description": "Remote-Hands-Support und proaktives Monitoring rund um die Uhr."
+      "footnote": "Alle Rack-Preise netto pro Monat · {perU} €/HE · {half} € Half Rack ({halfU} HE) · {full} € Full Rack ({fullU} HE)"
+    },
+    "location": {
+      "eyebrow": "Standort",
+      "title": "Molfsee, 10 Minuten südlich von Kiel.",
+      "lede": "Direkt an der A215. Aus Hamburg in 75 Minuten, aus Kopenhagen mit der Fähre. Wir öffnen die Tür, du stellst dein Blech rein.",
+      "address": {
+        "0": "Datacenter Molfsee",
+        "1": "Rendsburger Landstraße 142",
+        "2": "24113 Molfsee",
+        "3": "Deutschland"
       }
     },
     "cta": {
-      "title": "Bereit, Ihre Infrastruktur zu planen?",
-      "subtitle": "Nutzen Sie unseren visuellen Rack-Builder, um Equipment, U-Platz und Strombedarf vor dem Einzug zu planen.",
-      "button": "Rack-Builder öffnen"
+      "title": "Bereit, dein Blech einzubuchen?",
+      "lede": "Konfiguriere deinen Platz in zwei Minuten. Transparente Netto-Preise, live Rack-Vorschau.",
+      "button": "Jetzt konfigurieren"
     }
   },
   "configure": {
@@ -51,9 +121,12 @@
     "subtitle": "Konfigurieren Sie benötigte Rack-Einheiten und Strom per Schieberegler.",
     "sliders": {
       "title": "Konfiguration",
-      "hint": "Legen Sie benötigte Rack-Einheiten und Strom fest",
+      "hint": "Rack-Einheiten und Strombedarf festlegen",
       "neededUnits": "Benötigte Rack-Einheiten",
-      "power": "Benötigter Strom"
+      "powerSection": "Strom",
+      "maxPower": "Max. Leistung",
+      "totalPower": "Gesamtverbrauch",
+      "powerCostHint": "Abrechnung mit {price} € pro kWh"
     },
     "rack": {
       "title": "Rack-Layout",
@@ -61,6 +134,11 @@
       "remove": "Rack entfernen",
       "clear": "Zurücksetzen",
       "selectRack": "Rack auswählen",
+      "full": "Voll",
+      "limit": "Bis zu {max} Racks · je {units} HE",
+      "fillBeforeAdd": "Alle vorhandenen Racks auf {units} HE füllen, bevor ein weiteres hinzugefügt wird.",
+      "addDisabledHint": "Alle Racks müssen voll ({units} HE) sein, bevor ein weiteres hinzugefügt wird.",
+      "lockedHint": "Alle vorherigen Racks auf {units} HE füllen, um dieses Rack zu konfigurieren.",
       "units": "{height}U",
       "fixedHeight": "Standard-Rack: {height}U",
       "schematic": "Frontansicht — vollständiges 47U Gehäuse",
@@ -72,14 +150,27 @@
     },
     "power": {
       "title": "Übersicht",
-      "budgetUnit": "kW",
+      "kwUnit": "kW",
+      "kwhUnit": "kWh",
       "usedSpace": "Belegter Platz",
       "freeSpace": "Freier Platz",
-      "required": "Benötigter Strom"
+      "maxPower": "Max. Leistung",
+      "totalPower": "Gesamtverbrauch"
+    },
+    "overview": {
+      "title": "Gesamtkonfiguration",
+      "subtitle": "{count, plural, one {# Rack konfiguriert} other {# Racks konfiguriert}}",
+      "grandTotal": "Gesamt monatlich",
+      "rackTotal": "Alle Rackplätze",
+      "powerTotal": "Gesamter Strom"
     },
     "pricing": {
       "title": "Geschätzter Preis",
+      "totalTitle": "Gesamt monatlich",
       "net": "netto pro Monat",
+      "rackLine": "Rackplatz",
+      "powerLine": "Strom",
+      "powerCalc": "{kwh} kWh × {price} €/kWh",
       "tiers": {
         "perU": "Einzel-U-Preis (12 €/U)",
         "half": "Half Rack (24U)",
@@ -88,7 +179,8 @@
       "rates": {
         "full": "Full Rack (47U): {price} € netto",
         "half": "Half Rack (24U): {price} € netto",
-        "perU": "Einzel-U: {price} € netto je U"
+        "perU": "Einzel-U: {price} € netto je U",
+        "power": "Strom: {price} € netto pro kWh"
       }
     }
   },
