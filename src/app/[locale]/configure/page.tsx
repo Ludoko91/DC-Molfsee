@@ -31,7 +31,7 @@ async function ConfigureHeader() {
 
   return (
     <div className="mb-8">
-      <h1 className="text-3xl font-bold tracking-tight text-white">{t("title")}</h1>
+      <h1 className="text-3xl font-bold tracking-tight text-foreground">{t("title")}</h1>
       <p className="mt-2 text-muted">{t("subtitle")}</p>
     </div>
   );

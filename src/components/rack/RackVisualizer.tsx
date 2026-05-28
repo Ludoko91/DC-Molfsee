@@ -62,7 +62,7 @@ export function RackVisualizer({ rack }: Props) {
   return (
     <div className="rounded-xl border border-card-border bg-card/50 p-4">
       <div className="mb-4">
-        <h2 className="font-semibold text-white">
+        <h2 className="font-semibold text-foreground">
           {t("rack.title")} — {rack.name}
         </h2>
         <p className="mt-1 text-xs text-muted">

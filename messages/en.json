@@ -1,49 +1,119 @@
 {
   "metadata": {
-    "title": "Your Datacenter — Enterprise Colocation",
-    "description": "Plan your rack space and power requirements with our interactive datacenter configurator."
+    "title": "Datacenter Molfsee — Affordable Rack Space for Homelabs",
+    "description": "Colocation in Molfsee, Schleswig-Holstein. Configure rack units and power with transparent net pricing."
   },
   "nav": {
     "home": "Home",
     "configure": "Configure",
-    "brand": "Your Datacenter"
+    "facility": "Facility",
+    "pricing": "Pricing",
+    "location": "Location",
+    "book": "Book a rack",
+    "brand": "Datacenter Molfsee",
+    "coords": "54.27° N · 10.10° E"
   },
   "footer": {
-    "copyright": "© {year} Your Datacenter. All rights reserved.",
-    "contact": "Contact: info@yourdatacenter.com"
+    "tagline": "Datacenter Molfsee · run by people who know where the backup lives.",
+    "copyright": "© {year} Datacenter Molfsee. All rights reserved.",
+    "contact": "info@datacenter-molfsee.de"
   },
   "landing": {
     "hero": {
-      "badge": "Enterprise Colocation",
-      "title": "Reliable infrastructure for your critical workloads",
-      "subtitle": "Plan your colocation footprint with precision. Configure rack units and power budgets using interactive sliders.",
-      "cta": "Configure Your Rack",
-      "secondary": "Learn more"
+      "eyebrow": "Tier 2/3 Colocation · Molfsee, Schleswig-Holstein",
+      "title1": "Affordable",
+      "title2": "rack space",
+      "title3": "for homelabs.",
+      "lede": "We run a small, honest data center just south of Kiel. No enterprise markup, no sales theatre. Just power, cooling, bandwidth, and a 47U rack with your name on it.",
+      "cta": "Configure your space",
+      "secondary": "See pricing",
+      "stats": {
+        "facility": { "label": "Facility", "value": "Tier 2/3" },
+        "location": { "label": "Location", "value": "Molfsee · DE" },
+        "available": { "label": "Available", "value": "47U per rack" },
+        "from": { "label": "From", "value": "€12 / U" }
+      }
     },
-    "features": {
-      "title": "Why choose us",
-      "subtitle": "Built for mission-critical operations with redundancy at every layer.",
-      "power": {
-        "title": "Redundant Power",
-        "description": "Dual power feeds with N+1 UPS and generator backup for uninterrupted operations."
+    "facility": {
+      "eyebrow": "The facility",
+      "title": "Small enough that we know your name.",
+      "lede": "Three rooms, seven rows, honest engineering. We're not Northern Germany's biggest data center — we're the one that picks up the phone.",
+      "cards": {
+        "power": {
+          "tag": "Power",
+          "value": "A+B feeds",
+          "note": "Redundant supply, UPS-buffered, 36 hours of diesel at full load."
+        },
+        "cooling": {
+          "tag": "Cooling",
+          "value": "Cold/hot aisle",
+          "note": "22 °C supply, free cooling 8 months a year — thanks, Schleswig-Holstein."
+        },
+        "network": {
+          "tag": "Network",
+          "value": "Dual carrier",
+          "note": "10 Gbit/s uplinks, BGP-capable, DE-CIX Hamburg via dark fibre."
+        },
+        "access": {
+          "tag": "Access",
+          "value": "24/7",
+          "note": "Keycard, mantrap, video recording. Remote hands on request."
+        }
+      }
+    },
+    "pricing": {
+      "eyebrow": "Pricing",
+      "title": "Three numbers. That's it.",
+      "lede": "No setup fees, no hidden line items. You pay for rack units and power — all prices net.",
+      "month": "month",
+      "tiers": {
+        "perU": {
+          "size": "1U",
+          "note": "Ideal for a single server, NAS, or firewall."
+        },
+        "half": {
+          "size": "Half rack · 24U",
+          "note": "Enough for your own small cluster."
+        },
+        "full": {
+          "size": "Full rack · 47U",
+          "note": "Your own PDU, your own key."
+        }
       },
-      "connectivity": {
-        "title": "Premium Connectivity",
-        "description": "Carrier-neutral facility with low-latency cross-connects and diverse fiber paths."
+      "extras": {
+        "power": {
+          "label": "Power",
+          "value": "Configurable",
+          "note": "Set your kW requirement in the configurator"
+        },
+        "bandwidth": {
+          "label": "Bandwidth",
+          "value": "from €5 / month",
+          "note": "100 Mbit/s flat, higher tiers on request"
+        },
+        "ipv4": {
+          "label": "IPv4",
+          "value": "€2 / address",
+          "note": "IPv6 /64 included"
+        }
       },
-      "security": {
-        "title": "Physical Security",
-        "description": "24/7 on-site staff, biometric access control, and CCTV monitoring throughout."
-      },
-      "support": {
-        "title": "24/7 Operations",
-        "description": "Remote hands support and proactive monitoring around the clock."
+      "footnote": "All rack prices net per month · {perU} €/U · {half} € half rack ({halfU}U) · {full} € full rack ({fullU}U)"
+    },
+    "location": {
+      "eyebrow": "Location",
+      "title": "Molfsee, ten minutes south of Kiel.",
+      "lede": "Right off the A215. 75 minutes from Hamburg, ferry-distance from Copenhagen. We unlock the door, you slide your gear in.",
+      "address": {
+        "0": "Datacenter Molfsee",
+        "1": "Rendsburger Landstraße 142",
+        "2": "24113 Molfsee",
+        "3": "Germany"
       }
     },
     "cta": {
-      "title": "Ready to plan your deployment?",
-      "subtitle": "Use our visual rack builder to map out your equipment, U-space, and power requirements before you move in.",
-      "button": "Open Rack Builder"
+      "title": "Ready to rack it up?",
+      "lede": "Configure your space in two minutes. Transparent net pricing, live rack preview.",
+      "button": "Configure now"
     }
   },
   "configure": {
@@ -51,9 +121,12 @@
     "subtitle": "Use the sliders to configure your required rack units and power.",
     "sliders": {
       "title": "Configuration",
-      "hint": "Set how many rack units and how much power you need",
+      "hint": "Set rack units and power requirements",
       "neededUnits": "Required Rack Units",
-      "power": "Required Power"
+      "powerSection": "Power",
+      "maxPower": "Max Power",
+      "totalPower": "Total Power",
+      "powerCostHint": "Billed at {price} € per kWh"
     },
     "rack": {
       "title": "Rack Layout",
@@ -61,6 +134,11 @@
       "remove": "Remove Rack",
       "clear": "Reset",
       "selectRack": "Select rack",
+      "full": "Full",
+      "limit": "Up to {max} racks · {units}U each",
+      "fillBeforeAdd": "Fill every existing rack to {units}U before adding another.",
+      "addDisabledHint": "All racks must be full ({units}U) before adding another.",
+      "lockedHint": "Fill all previous racks to {units}U to configure this rack.",
       "units": "{height}U",
       "fixedHeight": "Standard rack: {height}U",
       "schematic": "Front elevation — full 47U cabinet",
@@ -72,10 +150,38 @@
     },
     "power": {
       "title": "Summary",
-      "budgetUnit": "kW",
+      "kwUnit": "kW",
+      "kwhUnit": "kWh",
       "usedSpace": "Used Space",
       "freeSpace": "Free Space",
-      "required": "Required Power"
+      "maxPower": "Max Power",
+      "totalPower": "Total Power"
+    },
+    "overview": {
+      "title": "Total configuration",
+      "subtitle": "{count, plural, one {# rack configured} other {# racks configured}}",
+      "grandTotal": "Total monthly",
+      "rackTotal": "All rack space",
+      "powerTotal": "All power"
+    },
+    "pricing": {
+      "title": "Estimated Price",
+      "totalTitle": "Total Monthly",
+      "net": "net per month",
+      "rackLine": "Rack space",
+      "powerLine": "Power",
+      "powerCalc": "{kwh} kWh × {price} €/kWh",
+      "tiers": {
+        "perU": "Single U pricing (12 €/U)",
+        "half": "Half rack (24U)",
+        "full": "Full rack (47U)"
+      },
+      "rates": {
+        "full": "Full rack (47U): {price} € net",
+        "half": "Half rack (24U): {price} € net",
+        "perU": "Single U: {price} € net each",
+        "power": "Power: {price} € net per kWh"
+      }
     }
   },
   "language": {
