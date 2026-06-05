@@ -1,6 +1,7 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { getRequiredPowerFeeds } from "@/lib/rack/calculations";
 import {
   MAX_MAX_POWER_KW,
   MAX_NEEDED_UNITS,
@@ -8,7 +9,8 @@ import {
   MIN_MAX_POWER_KW,
   MIN_NEEDED_UNITS,
   MIN_TOTAL_POWER_KWH,
-  POWER_PRICE_EUR_PER_KWH,
+  POWER_FEED_EXTRA_PRICE_EUR,
+  POWER_FEED_KW,
   RACK_HEIGHT_U,
   type RackConfig,
 } from "@/lib/rack/types";
@@ -19,6 +21,7 @@ type Props = {
   disabled?: boolean;
   onSetNeededUnits: (units: number) => void;
   onSetMaxPowerKw: (maxPowerKw: number) => void;
+  onSetPowerFeeds: (powerFeeds: number) => void;
   onSetTotalPowerKwh: (totalPowerKwh: number) => void;
 };
 
@@ -72,12 +75,14 @@ export function ConfigurationSliders({
   disabled = false,
   onSetNeededUnits,
   onSetMaxPowerKw,
+  onSetPowerFeeds,
   onSetTotalPowerKwh,
 }: Props) {
   const t = useTranslations("configure");
+  const minFeeds = getRequiredPowerFeeds(rack.maxPowerKw);
 
   return (
-    <aside className="space-y-6 rounded-xl border border-card-border bg-card/50 p-4">
+    <aside className="card-surface space-y-6 p-5">
       <div>
         <h2 className="font-semibold text-foreground">{t("sliders.title")}</h2>
         <p className="mt-1 text-xs text-muted">{t("sliders.hint")}</p>
@@ -120,13 +125,29 @@ export function ConfigurationSliders({
         />
 
         <ConfigSlider
+          label={t("sliders.powerFeeds")}
+          value={rack.powerFeeds}
+          min={minFeeds}
+          max={10}
+          step={1}
+          unit={t("power.feedsUnit")}
+          hint={t("sliders.powerFeedsHint", {
+            kw: POWER_FEED_KW,
+            free: 1,
+            price: POWER_FEED_EXTRA_PRICE_EUR,
+          })}
+          disabled={disabled}
+          onChange={onSetPowerFeeds}
+        />
+
+        <ConfigSlider
           label={t("sliders.totalPower")}
           value={rack.totalPowerKwh}
           min={MIN_TOTAL_POWER_KWH}
           max={MAX_TOTAL_POWER_KWH}
           step={10}
           unit={t("power.kwhUnit")}
-          hint={t("sliders.powerCostHint", { price: POWER_PRICE_EUR_PER_KWH })}
+          hint={t("sliders.totalPowerHint")}
           disabled={disabled}
           onChange={onSetTotalPowerKwh}
         />

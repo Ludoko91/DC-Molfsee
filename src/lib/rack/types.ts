@@ -64,7 +64,7 @@ export const MAX_NEEDED_UNITS = 47;
 export const MIN_MAX_POWER_KW = 0.5;
 export const MAX_MAX_POWER_KW = 20;
 export const MIN_TOTAL_POWER_KWH = 0;
-export const MAX_TOTAL_POWER_KWH = 5000;
+export const MAX_TOTAL_POWER_KWH = 14400;
 export const MAX_RACKS = 5;
 
 export function isRackFull(rack: RackConfig): boolean {

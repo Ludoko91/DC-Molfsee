@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Datacenter Molfsee — Bezahlbarer Rackplatz für Homelabs",
+    "title": "ComputeNord Datacenter — Bezahlbarer Rackplatz für Homelabs",
     "description": "Colocation in Molfsee, Schleswig-Holstein. Rack-Einheiten und Strom mit transparenten Netto-Preisen konfigurieren."
   },
   "nav": {
@@ -10,14 +10,20 @@
     "pricing": "Preise",
     "location": "Standort",
     "book": "Rack buchen",
-    "brand": "Datacenter Molfsee",
-    "coords": "54.27° N · 10.10° E"
+    "brand": "ComputeNord Datacenter",
+    "coords": "Molfsee · Schleswig-Holstein",
+    "email": "info@datacenter-molfsee.de",
+    "hours": "Mo–Fr · 08:00–17:00",
+    "availability": "24/7 Zutritt nach Vereinbarung"
   },
   "footer": {
-    "tagline": "Datacenter Molfsee · betrieben von Menschen, die wissen, wo das Backup liegt.",
-    "copyright": "© {year} Datacenter Molfsee. Alle Rechte vorbehalten.",
+    "tagline": "Bezahlbarer Colocation-Standort in Molfsee — betrieben von Menschen, die wissen, wo das Backup liegt.",
+    "copyright": "© {year} ComputeNord Datacenter. Alle Rechte vorbehalten.",
     "contact": "info@datacenter-molfsee.de",
-    "impressum": "Impressum"
+    "impressum": "Impressum",
+    "navTitle": "Entdecken",
+    "contactTitle": "Kontakt",
+    "partOf": "Ein ComputeNord Infrastrukturprojekt"
   },
   "impressum": {
     "meta": {
@@ -45,10 +51,11 @@
   },
   "landing": {
     "hero": {
-      "eyebrow": "Tier 2/3 Colocation · Molfsee, Schleswig-Holstein",
-      "title1": "Bezahlbarer",
-      "title2": "Rackplatz",
+      "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
+      "title1": "Rackplatz",
+      "title2": "aus dem Norden",
       "title3": "für Homelabs.",
+      "tagline": "Colocation mit norddeutscher Zuverlässigkeit.",
       "lede": "Wir betreiben einen kleinen, ehrlichen Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
       "cta": "Platz konfigurieren",
       "secondary": "Preise ansehen",
@@ -90,6 +97,7 @@
       "eyebrow": "Preise",
       "title": "Drei Zahlen. Mehr nicht.",
       "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten und Strom — alle Preise netto.",
+      "featured": "Beliebt",
       "month": "Monat",
       "tiers": {
         "perU": {
@@ -153,7 +161,7 @@
       "powerFeeds": "Stromzuführungen",
       "powerFeedsHint": "{free} Zufuhr inklusive · je Zufuhr {kw} kW · weitere {price} € / Monat",
       "totalPower": "Gesamtverbrauch",
-      "powerCostHint": "Abrechnung mit {price} € pro kWh"
+      "totalPowerHint": "Erwarteter Monatsverbrauch zur Planung — nicht im Gesamtpreis enthalten"
     },
     "rack": {
       "title": "Rack-Layout",

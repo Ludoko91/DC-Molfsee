@@ -60,7 +60,7 @@ export function RackVisualizer({ rack }: Props) {
   const bayHeight = RACK_HEIGHT_U * SLOT_HEIGHT_PX;
 
   return (
-    <div className="rounded-xl border border-card-border bg-card/50 p-4">
+    <div className="card-surface p-5">
       <div className="mb-4">
         <h2 className="font-semibold text-foreground">
           {t("rack.title")} — {rack.name}

@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Datacenter Molfsee — Affordable Rack Space for Homelabs",
+    "title": "ComputeNord Datacenter — Affordable Rack Space for Homelabs",
     "description": "Colocation in Molfsee, Schleswig-Holstein. Configure rack units and power with transparent net pricing."
   },
   "nav": {
@@ -10,14 +10,20 @@
     "pricing": "Pricing",
     "location": "Location",
     "book": "Book a rack",
-    "brand": "Datacenter Molfsee",
-    "coords": "54.27° N · 10.10° E"
+    "brand": "ComputeNord Datacenter",
+    "coords": "Molfsee · Schleswig-Holstein",
+    "email": "info@datacenter-molfsee.de",
+    "hours": "Mon–Fri · 08:00–17:00",
+    "availability": "24/7 access by arrangement"
   },
   "footer": {
-    "tagline": "Datacenter Molfsee · run by people who know where the backup lives.",
-    "copyright": "© {year} Datacenter Molfsee. All rights reserved.",
+    "tagline": "Affordable colocation in Molfsee — run by people who know where the backup lives.",
+    "copyright": "© {year} ComputeNord Datacenter. All rights reserved.",
     "contact": "info@datacenter-molfsee.de",
-    "impressum": "Impressum"
+    "impressum": "Impressum",
+    "navTitle": "Explore",
+    "contactTitle": "Contact",
+    "partOf": "A ComputeNord infrastructure project"
   },
   "impressum": {
     "meta": {
@@ -45,10 +51,11 @@
   },
   "landing": {
     "hero": {
-      "eyebrow": "Tier 2/3 Colocation · Molfsee, Schleswig-Holstein",
-      "title1": "Affordable",
-      "title2": "rack space",
+      "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
+      "title1": "Rack space",
+      "title2": "from the North",
       "title3": "for homelabs.",
+      "tagline": "Colocation with northern reliability.",
       "lede": "We run a small, honest data center just south of Kiel. No enterprise markup, no sales theatre. Just power, cooling, bandwidth, and a 47U rack with your name on it.",
       "cta": "Configure your space",
       "secondary": "See pricing",
@@ -90,6 +97,7 @@
       "eyebrow": "Pricing",
       "title": "Three numbers. That's it.",
       "lede": "No setup fees, no hidden line items. You pay for rack units and power — all prices net.",
+      "featured": "Popular",
       "month": "month",
       "tiers": {
         "perU": {
@@ -153,7 +161,7 @@
       "powerFeeds": "Power feeds",
       "powerFeedsHint": "{free} feed included · each feed provides {kw} kW · additional feeds {price} € / month",
       "totalPower": "Total Power",
-      "powerCostHint": "Billed at {price} € per kWh"
+      "totalPowerHint": "Expected monthly consumption for planning — not included in the total price"
     },
     "rack": {
       "title": "Rack Layout",

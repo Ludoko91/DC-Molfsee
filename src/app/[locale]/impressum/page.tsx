@@ -22,14 +22,14 @@ export default async function ImpressumPage({ params }: Props) {
 
   return (
     <section className="section-padding">
-      <div className="mx-auto w-full max-w-5xl">
-        <div className="rounded-2xl border border-card-border bg-card p-6 shadow-sm md:p-10">
-          <p className="font-mono-label text-xs text-muted">{t("eyebrow")}</p>
-          <h1 className="mt-3 text-balance font-serif-display text-3xl tracking-tight text-foreground md:text-4xl">
+      <div className="mx-auto w-full max-w-3xl">
+        <div className="card-surface p-8 md:p-10">
+          <div className="eyebrow">{t("eyebrow")}</div>
+          <h1 className="font-display text-3xl tracking-tight text-accent-deep md:text-4xl">
             {t("title")}
           </h1>
 
-          <div className="prose prose-invert mt-8 max-w-none prose-p:text-foreground/80">
+          <div className="prose-cn mt-8">
             <h2>{t("provider.title")}</h2>
             <p>{t("provider.body")}</p>
 
@@ -47,4 +47,3 @@ export default async function ImpressumPage({ params }: Props) {
     </section>
   );
 }
-

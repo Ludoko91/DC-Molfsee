@@ -1,9 +1,12 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
 import { calculateTotalSummary } from "@/lib/rack/calculations";
 import { formatEur } from "@/lib/format";
 import type { RackConfig } from "@/lib/rack/types";
+import { encodeSharedRackConfig } from "@/lib/rack/share";
+import { generateId } from "@/lib/utils";
 
 type Props = {
   racks: RackConfig[];
@@ -12,11 +15,33 @@ type Props = {
 export function TotalOverview({ racks }: Props) {
   const t = useTranslations("configure");
   const locale = useLocale();
+  const router = useRouter();
   const numberLocale = locale === "de" ? "de-DE" : "en-IE";
   const total = calculateTotalSummary(racks);
 
+  function handleContactClick() {
+    const encoded = encodeSharedRackConfig(racks);
+    const basePath = `/${locale}/contact`;
+
+    // Prefer querystring to keep the flow static-friendly. Fall back to sessionStorage for very large configurations.
+    const queryHref = `${basePath}?c=${encoded}`;
+    if (queryHref.length <= 1800) {
+      router.push(queryHref);
+      return;
+    }
+
+    const token = generateId();
+    try {
+      sessionStorage.setItem(`contactConfig:${token}`, JSON.stringify(racks));
+      router.push(`${basePath}?t=${encodeURIComponent(token)}`);
+    } catch {
+      // If storage fails, still try with the query (might still work for some clients).
+      router.push(queryHref);
+    }
+  }
+
   return (
-    <section className="mt-6 rounded-xl border border-card-border bg-card/50 p-4 sm:p-5">
+    <section className="card-surface mt-8 p-5 sm:p-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h2 className="font-semibold text-foreground">{t("overview.title")}</h2>
@@ -44,11 +69,22 @@ export function TotalOverview({ racks }: Props) {
           </span>
         </div>
         <div className="flex items-center justify-between gap-4 text-sm">
-          <span className="text-muted">{t("overview.powerTotal")}</span>
+          <span className="text-muted">{t("overview.feedsTotal")}</span>
           <span className="font-medium text-foreground">
-            {formatEur(total.totalPowerCostEur, numberLocale)}
+            {formatEur(total.totalFeedsCostEur, numberLocale)}
           </span>
         </div>
+      </div>
+
+      <div className="mt-5 flex flex-col gap-2 border-t border-card-border pt-5 sm:flex-row sm:items-center sm:justify-between">
+        <p className="text-xs text-muted">{t("overview.email.hint")}</p>
+        <button
+          type="button"
+          onClick={handleContactClick}
+          className="btn-primary w-full text-sm sm:w-auto"
+        >
+          {t("overview.contactButton")}
+        </button>
       </div>
 
       {total.rackCount > 1 && (
@@ -62,7 +98,7 @@ export function TotalOverview({ racks }: Props) {
               <span className="font-mono text-xs text-foreground/80 sm:text-sm">
                 {formatEur(line.rackCostEur, numberLocale)}
                 <span className="mx-1.5 text-muted">+</span>
-                {formatEur(line.powerCostEur, numberLocale)}
+                {formatEur(line.feedsCostEur, numberLocale)}
                 <span className="mx-1.5 text-muted">=</span>
                 <span className="font-medium text-foreground">
                   {formatEur(line.totalMonthlyEur, numberLocale)}

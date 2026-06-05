@@ -1,6 +1,8 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Hero } from "@/components/landing/Hero";
-import { Features } from "@/components/landing/Features";
+import { FacilitySection } from "@/components/landing/FacilitySection";
+import { PricingSection } from "@/components/landing/PricingSection";
+import { LocationSection } from "@/components/landing/LocationSection";
 import { CtaSection } from "@/components/landing/CtaSection";
 
 type Props = {
@@ -24,7 +26,9 @@ export default async function HomePage({ params }: Props) {
   return (
     <>
       <Hero />
-      <Features />
+      <FacilitySection />
+      <PricingSection />
+      <LocationSection />
       <CtaSection />
     </>
   );

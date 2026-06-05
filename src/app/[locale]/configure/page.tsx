@@ -19,9 +19,11 @@ export default async function ConfigurePage({ params }: Props) {
   setRequestLocale(locale);
 
   return (
-    <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-      <ConfigureHeader />
-      <RackBuilder />
+    <div className="page-header">
+      <div className="section-padding !pb-10 !pt-10">
+        <ConfigureHeader />
+        <RackBuilder />
+      </div>
     </div>
   );
 }
@@ -30,9 +32,12 @@ async function ConfigureHeader() {
   const t = await getTranslations("configure");
 
   return (
-    <div className="mb-8">
-      <h1 className="text-3xl font-bold tracking-tight text-foreground">{t("title")}</h1>
-      <p className="mt-2 text-muted">{t("subtitle")}</p>
+    <div className="mb-10 max-w-2xl">
+      <div className="eyebrow">{t("title")}</div>
+      <h1 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
+        {t("title")}
+      </h1>
+      <p className="mt-4 text-lg text-foreground-muted">{t("subtitle")}</p>
     </div>
   );
 }
