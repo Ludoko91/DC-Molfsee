@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Datacenter Molfsee — Bezahlbarer Rackplatz für Homelabs",
+    "title": "ComputeNord Datacenter — Bezahlbarer Rackplatz für Homelabs",
     "description": "Colocation in Molfsee, Schleswig-Holstein. Rack-Einheiten und Strom mit transparenten Netto-Preisen konfigurieren."
   },
   "nav": {
@@ -10,25 +10,64 @@
     "pricing": "Preise",
     "location": "Standort",
     "book": "Rack buchen",
-    "brand": "Datacenter Molfsee",
-    "coords": "54.27° N · 10.10° E"
+    "brand": "ComputeNord Datacenter",
+    "coords": "Molfsee · Schleswig-Holstein",
+    "email": "info@datacenter-molfsee.de",
+    "hours": "Mo–Fr · 08:00–17:00",
+    "availability": "24/7 Zutritt nach Vereinbarung"
+  },
+  "construction": {
+    "banner": "Im Aufbau",
+    "bannerDetail": "Das Rechenzentrum in Molfsee ist noch nicht betriebsbereit. Preise und Konfigurationen können Sie schon erkunden. Buchungen sind erst nach Fertigstellung möglich.",
+    "configuratorTitle": "Nur Vorschau — Anlage im Aufbau",
+    "configuratorBody": "Verfügbarkeit und Preise sind Planungswerte. Buchungen sind erst möglich, wenn der Standort fertig ist.",
+    "contactHint": "Kontakt ist vorerst nur zur Interessensbekundung — die Anlage befindet sich im Aufbau."
   },
   "footer": {
-    "tagline": "Datacenter Molfsee · betrieben von Menschen, die wissen, wo das Backup liegt.",
-    "copyright": "© {year} Datacenter Molfsee. Alle Rechte vorbehalten.",
-    "contact": "info@datacenter-molfsee.de"
+    "tagline": "Bezahlbarer Colocation-Standort in Molfsee — betrieben von Menschen, die wissen, wo das Backup liegt.",
+    "copyright": "© {year} ComputeNord Datacenter. Alle Rechte vorbehalten.",
+    "contact": "info@datacenter-molfsee.de",
+    "impressum": "Impressum",
+    "navTitle": "Entdecken",
+    "contactTitle": "Kontakt",
+    "partOf": "Ein ComputeNord Infrastrukturprojekt"
+  },
+  "impressum": {
+    "meta": {
+      "title": "Impressum",
+      "description": "Anbieterkennzeichnung und Kontaktinformationen."
+    },
+    "eyebrow": "Rechtliches",
+    "title": "Impressum",
+    "provider": {
+      "title": "Anbieter",
+      "body": "Datacenter Molfsee · Rendsburger Landstraße 142 · 24113 Molfsee · Deutschland"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "body": "E-Mail: info@datacenter-molfsee.de"
+    },
+    "vat": {
+      "title": "USt-IdNr.",
+      "body": "USt-IdNr.: (folgt)"
+    },
+    "disclaimer": {
+      "title": "Haftungshinweis",
+      "body": "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
+    }
   },
   "landing": {
     "hero": {
-      "eyebrow": "Tier 2/3 Colocation · Molfsee, Schleswig-Holstein",
-      "title1": "Bezahlbarer",
-      "title2": "Rackplatz",
-      "title3": "für Homelabs.",
-      "lede": "Wir betreiben einen kleinen, ehrlichen Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
-      "cta": "Platz konfigurieren",
+      "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
+      "title1": "Rackplatz",
+      "title2": "aus dem Norden",
+      "title3": "für den Norden.",
+      "tagline": "Colocation mit norddeutscher Zuverlässigkeit.",
+      "lede": "Wir betreiben ein modernes Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
+      "cta": "Rack konfigurieren",
       "secondary": "Preise ansehen",
       "stats": {
-        "facility": { "label": "Anlage", "value": "Tier 2/3" },
+        "facility": { "label": "Anlage", "value": "Tier 3" },
         "location": { "label": "Standort", "value": "Molfsee · DE" },
         "available": { "label": "Verfügbar", "value": "47 HE / Rack" },
         "from": { "label": "Ab", "value": "12 € / HE" }
@@ -37,7 +76,7 @@
     "facility": {
       "eyebrow": "Die Anlage",
       "title": "Klein genug, dass wir dich beim Namen kennen.",
-      "lede": "Drei Räume, sieben Reihen, ehrliche Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind der, der dich am Telefon erkennt.",
+      "lede": "Ein Raum mit 11 Racks, moderner Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind die, die dich am Telefon erkennt.",
       "cards": {
         "power": {
           "tag": "Strom",
@@ -46,13 +85,13 @@
         },
         "cooling": {
           "tag": "Kühlung",
-          "value": "Kalt/Warm-Gang",
+          "value": "In-Row Cooling",
           "note": "22 °C Vorlauf, freie Kühlung 8 Monate im Jahr — Schleswig-Holstein sei Dank."
         },
         "network": {
           "tag": "Netzwerk",
           "value": "Dual-Carrier",
-          "note": "10 Gbit/s Uplinks, BGP-fähig, DE-CIX Hamburg via dunkler Faser."
+          "note": "10 Gbit/s Uplinks, BGP-fähig, DE-CIX Hamburg via dark fiber."
         },
         "access": {
           "tag": "Zutritt",
@@ -64,8 +103,9 @@
     "pricing": {
       "eyebrow": "Preise",
       "title": "Drei Zahlen. Mehr nicht.",
-      "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten und Strom — alle Preise netto.",
+      "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten, Strom und Powerfeeds— alle Preise netto.",
       "month": "Monat",
+      "popular": "Beliebt",
       "tiers": {
         "perU": {
           "size": "1 HE",
@@ -73,18 +113,18 @@
         },
         "half": {
           "size": "Half Rack · 24 HE",
-          "note": "Genug für den eigenen kleinen Cluster."
+          "note": "Genug für dein eignes kleines Cluster."
         },
         "full": {
           "size": "Full Rack · 47 HE",
-          "note": "Eigene PDU, eigener Schlüssel."
+          "note": "Deine eigenes Rack, dein eigener Schlüssel."
         }
       },
       "extras": {
         "power": {
           "label": "Strom",
-          "value": "Konfigurierbar",
-          "note": "kW-Bedarf im Konfigurator festlegen"
+          "value": "200€ / Powerfeed (1 inklusive)",
+          "note": "Konfiguriere deinen kW-Bedarf im Konfigurator."
         },
         "bandwidth": {
           "label": "Bandbreite",
@@ -102,7 +142,7 @@
     "location": {
       "eyebrow": "Standort",
       "title": "Molfsee, 10 Minuten südlich von Kiel.",
-      "lede": "Direkt an der A215. Aus Hamburg in 75 Minuten, aus Kopenhagen mit der Fähre. Wir öffnen die Tür, du stellst dein Blech rein.",
+      "lede": "Direkt an der A215. Aus Hamburg in 75 Minuten, aus Kopenhagen mit der Fähre. Wir öffnen die Tür, du stellst deine Server rein.",
       "address": {
         "0": "Datacenter Molfsee",
         "1": "Rendsburger Landstraße 142",
@@ -111,7 +151,7 @@
       }
     },
     "cta": {
-      "title": "Bereit, dein Blech einzubuchen?",
+      "title": "Bereit, deinen Server einzubuchen?",
       "lede": "Konfiguriere deinen Platz in zwei Minuten. Transparente Netto-Preise, live Rack-Vorschau.",
       "button": "Jetzt konfigurieren"
     }
@@ -125,8 +165,8 @@
       "neededUnits": "Benötigte Rack-Einheiten",
       "powerSection": "Strom",
       "maxPower": "Max. Leistung",
-      "totalPower": "Gesamtverbrauch",
-      "powerCostHint": "Abrechnung mit {price} € pro kWh"
+      "powerFeeds": "Stromzuführungen",
+      "powerFeedsHint": "Mind. {min} für Max.-Leistung · {free} Zufuhr inklusive · je Zufuhr {kw} kW · weitere {price} € / Monat"
     },
     "rack": {
       "title": "Rack-Layout",
@@ -141,36 +181,41 @@
       "lockedHint": "Alle vorherigen Racks auf {units} HE füllen, um dieses Rack zu konfigurieren.",
       "units": "{height}U",
       "fixedHeight": "Standard-Rack: {height}U",
-      "schematic": "Frontansicht — vollständiges 47U Gehäuse",
-      "schematicCentered": "Colocation bei U{start}–U{end} (zentriert im Rack)",
+      "schematic": "3D-Vorschau — vollständiges 47U Gehäuse",
+      "schematicCentered": "3D-Vorschau — Colocation bei U{start}–U{end} (zentriert im Rack)",
       "cabinetLabel": "{height}U Rack",
       "top": "Oben",
       "bottom": "U1",
-      "allocated": "{units}U Colocation"
+      "allocated": "{units}U Colocation",
+      "dragHint": "Ziehen zum Drehen"
     },
     "power": {
       "title": "Übersicht",
       "kwUnit": "kW",
-      "kwhUnit": "kWh",
+      "feedsUnit": "Zuführungen",
       "usedSpace": "Belegter Platz",
       "freeSpace": "Freier Platz",
       "maxPower": "Max. Leistung",
-      "totalPower": "Gesamtverbrauch"
+      "powerFeeds": "Stromzuführungen"
     },
     "overview": {
       "title": "Gesamtkonfiguration",
       "subtitle": "{count, plural, one {# Rack konfiguriert} other {# Racks konfiguriert}}",
       "grandTotal": "Gesamt monatlich",
       "rackTotal": "Alle Rackplätze",
-      "powerTotal": "Gesamter Strom"
+      "feedsTotal": "Alle Stromzuführungen",
+      "contactButton": "Kontakt aufnehmen",
+      "email": {
+        "hint": "Führt zu einem Kontaktformular mit deiner aktuellen Konfiguration."
+      }
     },
     "pricing": {
       "title": "Geschätzter Preis",
       "totalTitle": "Gesamt monatlich",
       "net": "netto pro Monat",
       "rackLine": "Rackplatz",
-      "powerLine": "Strom",
-      "powerCalc": "{kwh} kWh × {price} €/kWh",
+      "feedsLine": "Stromzuführungen",
+      "feedsCalc": "{feeds} × {kw} kW (erste {free} inklusive) · {price} € / weitere Zufuhr",
       "tiers": {
         "perU": "Einzel-U-Preis (12 €/U)",
         "half": "Half Rack (24U)",
@@ -179,13 +224,93 @@
       "rates": {
         "full": "Full Rack (47U): {price} € netto",
         "half": "Half Rack (24U): {price} € netto",
-        "perU": "Einzel-U: {price} € netto je U",
-        "power": "Strom: {price} € netto pro kWh"
+        "perU": "Einzel-U: {price} € netto je U"
       }
     }
   },
   "language": {
     "en": "English",
     "de": "Deutsch"
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt — Rack-Konfiguration",
+      "description": "Sende uns deine Daten und deine ausgewählte Rack-Konfiguration."
+    },
+    "eyebrow": "Kontakt",
+    "title": "Konfiguration senden",
+    "subtitle": "Trage deine Daten ein — wir erzeugen eine versandfertige E-Mail inklusive deiner Rack- und Strom-Konfiguration.",
+    "missingConfig": {
+      "title": "Keine Konfiguration übergeben",
+      "body": "Bitte gehe zurück in den Konfigurator und klicke dort auf „Kontakt aufnehmen“, damit wir deine Auswahl übernehmen können."
+    },
+    "summary": {
+      "title": "Konfigurationsübersicht",
+      "hint": "Nur-lese Vorschau deiner Auswahl.",
+      "empty": "Keine Konfiguration gefunden."
+    },
+    "form": {
+      "title": "Deine Daten",
+      "hint": "Pflichtfelder werden per Validierung markiert.",
+      "email": "E-Mail",
+      "emailPlaceholder": "du@beispiel.de",
+      "role": "Rolle",
+      "rolePlaceholder": "Rolle auswählen",
+      "name": "Name",
+      "required": "Pflichtfeld",
+      "namePlaceholder": "Dein Name",
+      "company": "Firma (optional)",
+      "companyPlaceholder": "Firma / Organisation",
+      "phone": "Telefon (optional)",
+      "phonePlaceholder": "+49 …",
+      "message": "Nachricht (optional)",
+      "messagePlaceholder": "Gibt es noch etwas, das wir wissen sollten?",
+      "submit": "E-Mail erzeugen",
+      "submitSending": "Senden…",
+      "configSource": "Quelle der Konfiguration: {source}",
+      "configSourceQuery": "URL",
+      "configSourceSession": "Dieses Gerät",
+      "configSourceMissing": "fehlt",
+      "errors": {
+        "required": "Pflichtfeld",
+        "invalidEmail": "Bitte eine gültige E-Mail-Adresse eingeben"
+      }
+    },
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "engineer": "Engineer",
+      "student": "Student",
+      "other": "Sonstiges"
+    },
+    "email": {
+      "subject": "Anfrage zur Rack-Konfiguration ({count, plural, one {# Rack} other {# Racks}})",
+      "greeting": "Hallo Datacenter Molfsee-Team,",
+      "detailsHeader": "Kontaktdaten",
+      "messageHeader": "Nachricht",
+      "noMessage": "(keine Nachricht)",
+      "configHeader": "Konfiguration",
+      "fields": {
+        "email": "E-Mail",
+        "role": "Rolle",
+        "name": "Name",
+        "company": "Firma",
+        "phone": "Telefon"
+      }
+    },
+    "success": {
+      "title": "Versandbereit",
+      "body": "Kopiere den E-Mail-Text oder öffne dein E-Mail-Programm.",
+      "bodyServer": "Erfolgreich gesendet. Du kannst den Text trotzdem kopieren oder dein E-Mail-Programm öffnen.",
+      "copy": "E-Mail kopieren",
+      "copied": "Kopiert",
+      "copyFailed": "Kopieren fehlgeschlagen",
+      "openMail": "E-Mail-Programm öffnen"
+    },
+    "error": {
+      "title": "Automatischer Versand fehlgeschlagen",
+      "body": "Du kannst den E-Mail-Text trotzdem kopieren oder dein E-Mail-Programm als Fallback öffnen.",
+      "network": "Netzwerkfehler. Bitte erneut versuchen."
+    }
   }
 }

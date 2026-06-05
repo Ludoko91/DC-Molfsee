@@ -6,7 +6,8 @@ import {
   FULL_RACK_PRICE_EUR,
   HALF_RACK_PRICE_EUR,
   PER_U_PRICE_EUR,
-  POWER_PRICE_EUR_PER_KWH,
+  POWER_FEED_EXTRA_PRICE_EUR,
+  POWER_FEED_KW,
   RACK_HEIGHT_U,
   type RackConfig,
 } from "@/lib/rack/types";
@@ -35,7 +36,7 @@ export function PowerSummary({ rack }: Props) {
   const numberLocale = locale === "de" ? "de-DE" : "en-IE";
 
   return (
-    <aside className="rounded-xl border border-card-border bg-card/50 p-4">
+    <aside className="card-surface p-5">
       <h2 className="font-semibold text-foreground">{t("power.title")}</h2>
       <p className="mt-1 text-xs text-muted">{rack.name}</p>
 
@@ -71,9 +72,9 @@ export function PowerSummary({ rack }: Props) {
         </div>
 
         <div>
-          <dt className="text-xs text-muted">{t("power.totalPower")}</dt>
+          <dt className="text-xs text-muted">{t("power.powerFeeds")}</dt>
           <dd className="mt-1 text-lg font-semibold text-foreground">
-            {summary.totalPowerKwh} {t("power.kwhUnit")}
+            {summary.powerFeeds} {t("power.feedsUnit")}
           </dd>
         </div>
       </dl>
@@ -88,15 +89,17 @@ export function PowerSummary({ rack }: Props) {
         <p className="text-xs text-muted">{t(`pricing.tiers.${summary.pricing.tier}`)}</p>
 
         <div className="flex justify-between gap-4">
-          <span className="text-muted">{t("pricing.powerLine")}</span>
+          <span className="text-muted">{t("pricing.feedsLine")}</span>
           <span className="font-medium text-foreground">
-            {formatEur(summary.powerCostEur, numberLocale)}
+            {formatEur(summary.feedsCostEur, numberLocale)}
           </span>
         </div>
         <p className="text-xs text-muted">
-          {t("pricing.powerCalc", {
-            kwh: summary.totalPowerKwh,
-            price: POWER_PRICE_EUR_PER_KWH,
+          {t("pricing.feedsCalc", {
+            feeds: summary.powerFeeds,
+            kw: POWER_FEED_KW,
+            free: 1,
+            price: POWER_FEED_EXTRA_PRICE_EUR,
           })}
         </p>
       </div>
@@ -105,7 +108,6 @@ export function PowerSummary({ rack }: Props) {
         <p>{t("pricing.rates.full", { price: FULL_RACK_PRICE_EUR })}</p>
         <p>{t("pricing.rates.half", { price: HALF_RACK_PRICE_EUR })}</p>
         <p>{t("pricing.rates.perU", { price: PER_U_PRICE_EUR })}</p>
-        <p>{t("pricing.rates.power", { price: POWER_PRICE_EUR_PER_KWH })}</p>
       </div>
     </aside>
   );

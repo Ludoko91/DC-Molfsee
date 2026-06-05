@@ -12,6 +12,7 @@ import {
   createDefaultRack,
   createDefaultRackValues,
   createInitialState,
+  getRequiredPowerFeeds,
 } from "@/lib/rack/calculations";
 import type { RackConfig } from "@/lib/rack/types";
 
@@ -27,7 +28,7 @@ type Action =
   | { type: "CLEAR_RACK"; rackId: string }
   | { type: "SET_NEEDED_UNITS"; rackId: string; neededUnits: number }
   | { type: "SET_MAX_POWER_KW"; rackId: string; maxPowerKw: number }
-  | { type: "SET_TOTAL_POWER_KWH"; rackId: string; totalPowerKwh: number };
+  | { type: "SET_POWER_FEEDS"; rackId: string; powerFeeds: number };
 
 function rackReducer(state: State, action: Action): State {
   switch (action.type) {
@@ -83,19 +84,26 @@ function rackReducer(state: State, action: Action): State {
         ...state,
         racks: state.racks.map((rack) =>
           rack.id === action.rackId
-            ? { ...rack, maxPowerKw: action.maxPowerKw }
+            ? {
+                ...rack,
+                maxPowerKw: action.maxPowerKw,
+                powerFeeds: Math.max(rack.powerFeeds, getRequiredPowerFeeds(action.maxPowerKw)),
+              }
             : rack,
         ),
       };
     }
 
-    case "SET_TOTAL_POWER_KWH": {
+    case "SET_POWER_FEEDS": {
       if (!canConfigureRack(state.racks, action.rackId)) return state;
       return {
         ...state,
         racks: state.racks.map((rack) =>
           rack.id === action.rackId
-            ? { ...rack, totalPowerKwh: action.totalPowerKwh }
+            ? {
+                ...rack,
+                powerFeeds: Math.max(action.powerFeeds, getRequiredPowerFeeds(rack.maxPowerKw)),
+              }
             : rack,
         ),
       };
@@ -123,12 +131,8 @@ export function RackBuilder() {
           onSetMaxPowerKw={(maxPowerKw) =>
             dispatch({ type: "SET_MAX_POWER_KW", rackId: activeRack.id, maxPowerKw })
           }
-          onSetTotalPowerKwh={(totalPowerKwh) =>
-            dispatch({
-              type: "SET_TOTAL_POWER_KWH",
-              rackId: activeRack.id,
-              totalPowerKwh,
-            })
+          onSetPowerFeeds={(powerFeeds) =>
+            dispatch({ type: "SET_POWER_FEEDS", rackId: activeRack.id, powerFeeds })
           }
         />
 

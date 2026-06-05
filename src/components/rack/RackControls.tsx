@@ -30,7 +30,7 @@ export function RackControls({
   const isLastRack = racks[racks.length - 1]?.id === activeRack.id;
 
   return (
-    <div className="space-y-3 rounded-xl border border-card-border bg-card/50 p-4">
+    <div className="card-surface space-y-3 p-4">
       <div className="flex flex-wrap items-center gap-3">
         <div className="flex flex-wrap items-center gap-2">
           <span className="text-xs text-muted">{t("rack.selectRack")}:</span>
@@ -45,8 +45,8 @@ export function RackControls({
                 className={cn(
                   "inline-flex items-center gap-1.5 rounded-md px-3 py-1.5 text-sm font-medium transition",
                   rack.id === activeRackId
-                    ? "bg-accent text-slate-950"
-                    : "bg-card text-muted hover:text-foreground",
+                    ? "bg-accent text-white shadow-sm"
+                    : "bg-[var(--accent-light)] text-muted hover:text-accent-deep",
                   !configurable && rack.id !== activeRackId && "opacity-60",
                 )}
               >

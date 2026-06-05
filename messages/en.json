@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "title": "Datacenter Molfsee — Affordable Rack Space for Homelabs",
+    "title": "ComputeNord Datacenter — Affordable Rack Space for Homelabs",
     "description": "Colocation in Molfsee, Schleswig-Holstein. Configure rack units and power with transparent net pricing."
   },
   "nav": {
@@ -10,25 +10,64 @@
     "pricing": "Pricing",
     "location": "Location",
     "book": "Book a rack",
-    "brand": "Datacenter Molfsee",
-    "coords": "54.27° N · 10.10° E"
+    "brand": "ComputeNord Datacenter",
+    "coords": "Molfsee · Schleswig-Holstein",
+    "email": "info@datacenter-molfsee.de",
+    "hours": "Mon–Fri · 08:00–17:00",
+    "availability": "24/7 access by arrangement"
+  },
+  "construction": {
+    "banner": "Under construction",
+    "bannerDetail": "The Molfsee datacenter is not operational yet. Feel free to explore pricing and configurations. Bookings open once construction is complete.",
+    "configuratorTitle": "Preview only — facility under construction",
+    "configuratorBody": "Rack availability and prices shown here are planning figures. We cannot accept bookings until the site is ready.",
+    "contactHint": "Contact is for interest only while the facility is under construction."
   },
   "footer": {
-    "tagline": "Datacenter Molfsee · run by people who know where the backup lives.",
-    "copyright": "© {year} Datacenter Molfsee. All rights reserved.",
-    "contact": "info@datacenter-molfsee.de"
+    "tagline": "Affordable colocation in Molfsee — run by people who know where the backup lives.",
+    "copyright": "© {year} ComputeNord Datacenter. All rights reserved.",
+    "contact": "info@datacenter-molfsee.de",
+    "impressum": "Impressum",
+    "navTitle": "Explore",
+    "contactTitle": "Contact",
+    "partOf": "A ComputeNord infrastructure project"
+  },
+  "impressum": {
+    "meta": {
+      "title": "Impressum",
+      "description": "Legal notice and contact information."
+    },
+    "eyebrow": "Legal",
+    "title": "Impressum",
+    "provider": {
+      "title": "Service provider",
+      "body": "Datacenter Molfsee · Rendsburger Landstraße 142 · 24113 Molfsee · Germany"
+    },
+    "contact": {
+      "title": "Contact",
+      "body": "Email: info@datacenter-molfsee.de"
+    },
+    "vat": {
+      "title": "VAT ID",
+      "body": "VAT ID: (to be provided)"
+    },
+    "disclaimer": {
+      "title": "Disclaimer",
+      "body": "Despite careful control, we assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content."
+    }
   },
   "landing": {
     "hero": {
-      "eyebrow": "Tier 2/3 Colocation · Molfsee, Schleswig-Holstein",
-      "title1": "Affordable",
-      "title2": "rack space",
-      "title3": "for homelabs.",
-      "lede": "We run a small, honest data center just south of Kiel. No enterprise markup, no sales theatre. Just power, cooling, bandwidth, and a 47U rack with your name on it.",
+      "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
+      "title1": "Rack space",
+      "title2": "from the North",
+      "title3": "for everyone.",
+      "tagline": "Colocation with northern reliability.",
+      "lede": "We run a modern data center just south of Kiel. No enterprise markup, no sales theatre. Just power, cooling, bandwidth, and a 47U rack with your name on it.",
       "cta": "Configure your space",
       "secondary": "See pricing",
       "stats": {
-        "facility": { "label": "Facility", "value": "Tier 2/3" },
+        "facility": { "label": "Facility", "value": "Tier 3" },
         "location": { "label": "Location", "value": "Molfsee · DE" },
         "available": { "label": "Available", "value": "47U per rack" },
         "from": { "label": "From", "value": "€12 / U" }
@@ -37,7 +76,7 @@
     "facility": {
       "eyebrow": "The facility",
       "title": "Small enough that we know your name.",
-      "lede": "Three rooms, seven rows, honest engineering. We're not Northern Germany's biggest data center — we're the one that picks up the phone.",
+      "lede": "One room with 11 racks, honest engineering. We're not Northern Germany's biggest data center — we're the one that picks up the phone.",
       "cards": {
         "power": {
           "tag": "Power",
@@ -46,7 +85,7 @@
         },
         "cooling": {
           "tag": "Cooling",
-          "value": "Cold/hot aisle",
+          "value": "In-Row Cooling",
           "note": "22 °C supply, free cooling 8 months a year — thanks, Schleswig-Holstein."
         },
         "network": {
@@ -66,6 +105,7 @@
       "title": "Three numbers. That's it.",
       "lede": "No setup fees, no hidden line items. You pay for rack units and power — all prices net.",
       "month": "month",
+      "popular": "Popular",
       "tiers": {
         "perU": {
           "size": "1U",
@@ -125,8 +165,8 @@
       "neededUnits": "Required Rack Units",
       "powerSection": "Power",
       "maxPower": "Max Power",
-      "totalPower": "Total Power",
-      "powerCostHint": "Billed at {price} € per kWh"
+      "powerFeeds": "Power feeds",
+      "powerFeedsHint": "Min. {min} required for max power · {free} feed included · each feed provides {kw} kW · additional feeds {price} € / month"
     },
     "rack": {
       "title": "Rack Layout",
@@ -141,36 +181,41 @@
       "lockedHint": "Fill all previous racks to {units}U to configure this rack.",
       "units": "{height}U",
       "fixedHeight": "Standard rack: {height}U",
-      "schematic": "Front elevation — full 47U cabinet",
-      "schematicCentered": "Colocation at U{start}–U{end} (centered in rack)",
+      "schematic": "3D preview — full 47U cabinet",
+      "schematicCentered": "3D preview — colocation at U{start}–U{end} (centered in rack)",
       "cabinetLabel": "{height}U Rack",
       "top": "Top",
       "bottom": "U1",
-      "allocated": "{units}U colocation"
+      "allocated": "{units}U colocation",
+      "dragHint": "Drag to rotate"
     },
     "power": {
       "title": "Summary",
       "kwUnit": "kW",
-      "kwhUnit": "kWh",
+      "feedsUnit": "feeds",
       "usedSpace": "Used Space",
       "freeSpace": "Free Space",
       "maxPower": "Max Power",
-      "totalPower": "Total Power"
+      "powerFeeds": "Power feeds"
     },
     "overview": {
       "title": "Total configuration",
       "subtitle": "{count, plural, one {# rack configured} other {# racks configured}}",
       "grandTotal": "Total monthly",
       "rackTotal": "All rack space",
-      "powerTotal": "All power"
+      "feedsTotal": "All power feeds",
+      "contactButton": "Contact us",
+      "email": {
+        "hint": "This will take you to a contact form with your current configuration."
+      }
     },
     "pricing": {
       "title": "Estimated Price",
       "totalTitle": "Total Monthly",
       "net": "net per month",
       "rackLine": "Rack space",
-      "powerLine": "Power",
-      "powerCalc": "{kwh} kWh × {price} €/kWh",
+      "feedsLine": "Power feeds",
+      "feedsCalc": "{feeds} × {kw} kW (first {free} free) · {price} € / extra feed",
       "tiers": {
         "perU": "Single U pricing (12 €/U)",
         "half": "Half rack (24U)",
@@ -179,13 +224,93 @@
       "rates": {
         "full": "Full rack (47U): {price} € net",
         "half": "Half rack (24U): {price} € net",
-        "perU": "Single U: {price} € net each",
-        "power": "Power: {price} € net per kWh"
+        "perU": "Single U: {price} € net each"
       }
     }
   },
   "language": {
     "en": "English",
     "de": "Deutsch"
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact — Rack configuration",
+      "description": "Send us your details and your selected rack configuration."
+    },
+    "eyebrow": "Contact",
+    "title": "Send your configuration",
+    "subtitle": "Fill in your details and we’ll generate a ready-to-send email including your selected rack and power setup.",
+    "missingConfig": {
+      "title": "No configuration attached",
+      "body": "Please go back to the configurator and click “Contact us” so we can include your selection."
+    },
+    "summary": {
+      "title": "Configuration summary",
+      "hint": "Read-only preview of what you configured.",
+      "empty": "No configuration found."
+    },
+    "form": {
+      "title": "Your details",
+      "hint": "Required fields are marked by validation.",
+      "email": "Email",
+      "emailPlaceholder": "you@example.com",
+      "role": "Role",
+      "rolePlaceholder": "Select a role",
+      "name": "Name",
+      "required": "required",
+      "namePlaceholder": "Your name",
+      "company": "Company (optional)",
+      "companyPlaceholder": "Company / org",
+      "phone": "Phone (optional)",
+      "phonePlaceholder": "+49 …",
+      "message": "Message (optional)",
+      "messagePlaceholder": "Anything else we should know?",
+      "submit": "Generate email",
+      "submitSending": "Sending…",
+      "configSource": "Configuration source: {source}",
+      "configSourceQuery": "URL",
+      "configSourceSession": "This device",
+      "configSourceMissing": "missing",
+      "errors": {
+        "required": "Required",
+        "invalidEmail": "Please enter a valid email address"
+      }
+    },
+    "roles": {
+      "owner": "Owner",
+      "admin": "Admin",
+      "engineer": "Engineer",
+      "student": "Student",
+      "other": "Other"
+    },
+    "email": {
+      "subject": "Rack configuration inquiry ({count, plural, one {# rack} other {# racks}})",
+      "greeting": "Hello Datacenter Molfsee team,",
+      "detailsHeader": "Contact details",
+      "messageHeader": "Message",
+      "noMessage": "(no message)",
+      "configHeader": "Configuration",
+      "fields": {
+        "email": "Email",
+        "role": "Role",
+        "name": "Name",
+        "company": "Company",
+        "phone": "Phone"
+      }
+    },
+    "success": {
+      "title": "Ready to send",
+      "body": "Copy the email text or open your mail app.",
+      "bodyServer": "Sent successfully. You can still copy the email text or open your mail app.",
+      "copy": "Copy email",
+      "copied": "Copied",
+      "copyFailed": "Copy failed",
+      "openMail": "Open mail app"
+    },
+    "error": {
+      "title": "Couldn’t send automatically",
+      "body": "You can still copy the email text or open your mail app as a fallback.",
+      "network": "Network error. Please try again."
+    }
   }
 }
