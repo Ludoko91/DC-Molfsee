@@ -2,7 +2,7 @@ import type { RackConfig } from "./types";
 
 export type SharedRackConfig = Pick<
   RackConfig,
-  "id" | "name" | "neededUnits" | "maxPowerKw" | "totalPowerKwh" | "powerFeeds"
+  "id" | "name" | "neededUnits" | "maxPowerKw" | "powerFeeds"
 >;
 
 type SharedConfigPayloadV1 = {

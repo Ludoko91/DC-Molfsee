@@ -80,7 +80,6 @@ export async function POST(req: Request) {
     name: r.name,
     neededUnits: r.neededUnits,
     maxPowerKw: r.maxPowerKw,
-    totalPowerKwh: r.totalPowerKwh,
     powerFeeds: r.powerFeeds,
   }));
 
@@ -120,7 +119,6 @@ export async function POST(req: Request) {
     lines.push(`- Needed units: ${rack.neededUnits}U`);
     lines.push(`- Max power: ${rack.maxPowerKw} kW`);
     lines.push(`- Power feeds: ${rack.powerFeeds}`);
-    lines.push(`- Total power: ${rack.totalPowerKwh} kWh`);
     lines.push("");
   });
 

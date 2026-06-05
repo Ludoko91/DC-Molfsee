@@ -159,9 +159,7 @@
       "powerSection": "Power",
       "maxPower": "Max Power",
       "powerFeeds": "Power feeds",
-      "powerFeedsHint": "{free} feed included · each feed provides {kw} kW · additional feeds {price} € / month",
-      "totalPower": "Total Power",
-      "totalPowerHint": "Expected monthly consumption for planning — not included in the total price"
+      "powerFeedsHint": "Min. {min} required for max power · {free} feed included · each feed provides {kw} kW · additional feeds {price} € / month"
     },
     "rack": {
       "title": "Rack Layout",
@@ -186,12 +184,10 @@
     "power": {
       "title": "Summary",
       "kwUnit": "kW",
-      "kwhUnit": "kWh",
       "feedsUnit": "feeds",
       "usedSpace": "Used Space",
       "freeSpace": "Free Space",
       "maxPower": "Max Power",
-      "totalPower": "Total Power",
       "powerFeeds": "Power feeds"
     },
     "overview": {
@@ -199,7 +195,6 @@
       "subtitle": "{count, plural, one {# rack configured} other {# racks configured}}",
       "grandTotal": "Total monthly",
       "rackTotal": "All rack space",
-      "powerTotal": "All power",
       "feedsTotal": "All power feeds",
       "contactButton": "Contact us",
       "email": {
@@ -211,8 +206,6 @@
       "totalTitle": "Total Monthly",
       "net": "net per month",
       "rackLine": "Rack space",
-      "powerLine": "Power",
-      "powerCalc": "{kwh} kWh × {price} €/kWh",
       "feedsLine": "Power feeds",
       "feedsCalc": "{feeds} × {kw} kW (first {free} free) · {price} € / extra feed",
       "tiers": {
@@ -223,8 +216,7 @@
       "rates": {
         "full": "Full rack (47U): {price} € net",
         "half": "Half rack (24U): {price} € net",
-        "perU": "Single U: {price} € net each",
-        "power": "Power: {price} € net per kWh"
+        "perU": "Single U: {price} € net each"
       }
     }
   },

@@ -72,13 +72,6 @@ export function PowerSummary({ rack }: Props) {
         </div>
 
         <div>
-          <dt className="text-xs text-muted">{t("power.totalPower")}</dt>
-          <dd className="mt-1 text-lg font-semibold text-foreground">
-            {summary.totalPowerKwh} {t("power.kwhUnit")}
-          </dd>
-        </div>
-
-        <div>
           <dt className="text-xs text-muted">{t("power.powerFeeds")}</dt>
           <dd className="mt-1 text-lg font-semibold text-foreground">
             {summary.powerFeeds} {t("power.feedsUnit")}

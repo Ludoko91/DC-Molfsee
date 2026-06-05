@@ -159,9 +159,7 @@
       "powerSection": "Strom",
       "maxPower": "Max. Leistung",
       "powerFeeds": "Stromzuführungen",
-      "powerFeedsHint": "{free} Zufuhr inklusive · je Zufuhr {kw} kW · weitere {price} € / Monat",
-      "totalPower": "Gesamtverbrauch",
-      "totalPowerHint": "Erwarteter Monatsverbrauch zur Planung — nicht im Gesamtpreis enthalten"
+      "powerFeedsHint": "Mind. {min} für Max.-Leistung · {free} Zufuhr inklusive · je Zufuhr {kw} kW · weitere {price} € / Monat"
     },
     "rack": {
       "title": "Rack-Layout",
@@ -186,12 +184,10 @@
     "power": {
       "title": "Übersicht",
       "kwUnit": "kW",
-      "kwhUnit": "kWh",
       "feedsUnit": "Zuführungen",
       "usedSpace": "Belegter Platz",
       "freeSpace": "Freier Platz",
       "maxPower": "Max. Leistung",
-      "totalPower": "Gesamtverbrauch",
       "powerFeeds": "Stromzuführungen"
     },
     "overview": {
@@ -199,7 +195,6 @@
       "subtitle": "{count, plural, one {# Rack konfiguriert} other {# Racks konfiguriert}}",
       "grandTotal": "Gesamt monatlich",
       "rackTotal": "Alle Rackplätze",
-      "powerTotal": "Gesamter Strom",
       "feedsTotal": "Alle Stromzuführungen",
       "contactButton": "Kontakt aufnehmen",
       "email": {
@@ -211,8 +206,6 @@
       "totalTitle": "Gesamt monatlich",
       "net": "netto pro Monat",
       "rackLine": "Rackplatz",
-      "powerLine": "Strom",
-      "powerCalc": "{kwh} kWh × {price} €/kWh",
       "feedsLine": "Stromzuführungen",
       "feedsCalc": "{feeds} × {kw} kW (erste {free} inklusive) · {price} € / weitere Zufuhr",
       "tiers": {
@@ -223,8 +216,7 @@
       "rates": {
         "full": "Full Rack (47U): {price} € netto",
         "half": "Half Rack (24U): {price} € netto",
-        "perU": "Einzel-U: {price} € netto je U",
-        "power": "Strom: {price} € netto pro kWh"
+        "perU": "Einzel-U: {price} € netto je U"
       }
     }
   },

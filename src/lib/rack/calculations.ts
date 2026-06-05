@@ -4,7 +4,6 @@ import {
   DEFAULT_MAX_POWER_KW,
   DEFAULT_NEEDED_UNITS,
   DEFAULT_POWER_FEEDS,
-  DEFAULT_TOTAL_POWER_KWH,
   FULL_RACK_PRICE_EUR,
   HALF_RACK_PRICE_EUR,
   HALF_RACK_UNITS,
@@ -12,7 +11,6 @@ import {
   PER_U_PRICE_EUR,
   POWER_FEED_EXTRA_PRICE_EUR,
   POWER_FEED_KW,
-  POWER_PRICE_EUR_PER_KWH,
   RACK_HEIGHT_U,
   type PriceQuote,
   type RackConfig,
@@ -38,10 +36,6 @@ export function calculatePrice(neededUnits: number): PriceQuote {
   return options.reduce((best, option) =>
     option.amountEur < best.amountEur ? option : best,
   );
-}
-
-export function calculatePowerCost(totalPowerKwh: number): number {
-  return totalPowerKwh * POWER_PRICE_EUR_PER_KWH;
 }
 
 export function getRequiredPowerFeeds(maxPowerKw: number): number {
@@ -70,17 +64,13 @@ export function calculateRackSummary(rack: RackConfig): RackSummary {
   const usedU = rack.neededUnits;
   const freeU = RACK_HEIGHT_U - usedU;
   const pricing = calculatePrice(usedU);
-  const powerCostEur = calculatePowerCost(rack.totalPowerKwh);
   const feedsCostEur = calculateFeedsCost(rack.powerFeeds);
-  // Monthly total: rack space + power feeds only (kWh consumption is excluded).
   const totalMonthlyEur = pricing.amountEur + feedsCostEur;
 
   return {
     usedU,
     freeU,
     maxPowerKw: rack.maxPowerKw,
-    totalPowerKwh: rack.totalPowerKwh,
-    powerCostEur,
     powerFeeds: rack.powerFeeds,
     feedsCostEur,
     uUtilizationPercent:
@@ -98,7 +88,6 @@ export function createDefaultRack(index: number): RackConfig {
     name: `Rack ${index}`,
     neededUnits: DEFAULT_NEEDED_UNITS,
     maxPowerKw,
-    totalPowerKwh: DEFAULT_TOTAL_POWER_KWH,
     powerFeeds: Math.max(requiredFeeds, DEFAULT_POWER_FEEDS),
   };
 }
@@ -113,14 +102,13 @@ export function createInitialState(): { racks: RackConfig[]; activeRackId: strin
 
 export function createDefaultRackValues(): Pick<
   RackConfig,
-  "neededUnits" | "maxPowerKw" | "totalPowerKwh" | "powerFeeds"
+  "neededUnits" | "maxPowerKw" | "powerFeeds"
 > {
   const maxPowerKw = DEFAULT_MAX_POWER_KW;
   const requiredFeeds = getRequiredPowerFeeds(maxPowerKw);
   return {
     neededUnits: DEFAULT_NEEDED_UNITS,
     maxPowerKw,
-    totalPowerKwh: DEFAULT_TOTAL_POWER_KWH,
     powerFeeds: Math.max(requiredFeeds, DEFAULT_POWER_FEEDS),
   };
 }
@@ -132,7 +120,6 @@ export function calculateTotalSummary(racks: RackConfig[]): TotalSummary {
       id: rack.id,
       name: rack.name,
       rackCostEur: summary.pricing.amountEur,
-      powerCostEur: summary.powerCostEur,
       feedsCostEur: summary.feedsCostEur,
       totalMonthlyEur: summary.totalMonthlyEur,
     };
@@ -141,9 +128,7 @@ export function calculateTotalSummary(racks: RackConfig[]): TotalSummary {
   return {
     rackCount: racks.length,
     totalRackCostEur: lines.reduce((sum, line) => sum + line.rackCostEur, 0),
-    totalPowerCostEur: lines.reduce((sum, line) => sum + line.powerCostEur, 0),
     totalFeedsCostEur: lines.reduce((sum, line) => sum + line.feedsCostEur, 0),
-    totalPowerKwh: racks.reduce((sum, rack) => sum + rack.totalPowerKwh, 0),
     totalMonthlyEur: lines.reduce((sum, line) => sum + line.totalMonthlyEur, 0),
     racks: lines,
   };

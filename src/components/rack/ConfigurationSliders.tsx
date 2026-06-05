@@ -5,10 +5,8 @@ import { getRequiredPowerFeeds } from "@/lib/rack/calculations";
 import {
   MAX_MAX_POWER_KW,
   MAX_NEEDED_UNITS,
-  MAX_TOTAL_POWER_KWH,
   MIN_MAX_POWER_KW,
   MIN_NEEDED_UNITS,
-  MIN_TOTAL_POWER_KWH,
   POWER_FEED_EXTRA_PRICE_EUR,
   POWER_FEED_KW,
   RACK_HEIGHT_U,
@@ -22,7 +20,6 @@ type Props = {
   onSetNeededUnits: (units: number) => void;
   onSetMaxPowerKw: (maxPowerKw: number) => void;
   onSetPowerFeeds: (powerFeeds: number) => void;
-  onSetTotalPowerKwh: (totalPowerKwh: number) => void;
 };
 
 function ConfigSlider({
@@ -76,7 +73,6 @@ export function ConfigurationSliders({
   onSetNeededUnits,
   onSetMaxPowerKw,
   onSetPowerFeeds,
-  onSetTotalPowerKwh,
 }: Props) {
   const t = useTranslations("configure");
   const minFeeds = getRequiredPowerFeeds(rack.maxPowerKw);
@@ -126,30 +122,19 @@ export function ConfigurationSliders({
 
         <ConfigSlider
           label={t("sliders.powerFeeds")}
-          value={rack.powerFeeds}
-          min={minFeeds}
+          value={Math.max(rack.powerFeeds, minFeeds)}
+          min={1}
           max={10}
           step={1}
           unit={t("power.feedsUnit")}
           hint={t("sliders.powerFeedsHint", {
+            min: minFeeds,
             kw: POWER_FEED_KW,
             free: 1,
             price: POWER_FEED_EXTRA_PRICE_EUR,
           })}
           disabled={disabled}
-          onChange={onSetPowerFeeds}
-        />
-
-        <ConfigSlider
-          label={t("sliders.totalPower")}
-          value={rack.totalPowerKwh}
-          min={MIN_TOTAL_POWER_KWH}
-          max={MAX_TOTAL_POWER_KWH}
-          step={10}
-          unit={t("power.kwhUnit")}
-          hint={t("sliders.totalPowerHint")}
-          disabled={disabled}
-          onChange={onSetTotalPowerKwh}
+          onChange={(feeds) => onSetPowerFeeds(Math.max(feeds, minFeeds))}
         />
       </div>
     </aside>

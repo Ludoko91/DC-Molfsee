@@ -183,9 +183,6 @@ export function ContactForm() {
           `${tConfigure("overview.email.powerFeeds")}: ${summary.powerFeeds} ${tConfigure("power.feedsUnit")}`,
         );
         configLines.push(
-          `${tConfigure("overview.email.totalPowerKwh")}: ${summary.totalPowerKwh} ${tConfigure("power.kwhUnit")}`,
-        );
-        configLines.push(
           `${tConfigure("overview.email.monthlySubtotal")}: ${formatEur(summary.totalMonthlyEur, numberLocale)}`,
         );
         configLines.push("");
