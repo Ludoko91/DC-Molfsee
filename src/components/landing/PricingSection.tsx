@@ -15,9 +15,9 @@ export function PricingSection() {
   const t = useTranslations("landing.pricing");
 
   const tierMeta = {
-    perU: { price: PER_U_PRICE_EUR, featured: false },
-    half: { price: HALF_RACK_PRICE_EUR, featured: true },
-    full: { price: FULL_RACK_PRICE_EUR, featured: false },
+    perU: { price: PER_U_PRICE_EUR },
+    half: { price: HALF_RACK_PRICE_EUR },
+    full: { price: FULL_RACK_PRICE_EUR },
   };
 
   return (
@@ -33,18 +33,19 @@ export function PricingSection() {
       <div className="mt-14 grid gap-4 sm:grid-cols-3">
         {TIER_KEYS.map((key) => {
           const meta = tierMeta[key];
+          const isPopular = key === "half";
           return (
             <div
               key={key}
-              className={`rounded-[var(--radius)] border p-8 transition ${
-                meta.featured
-                  ? "border-accent bg-background shadow-[var(--shadow-lg)] ring-1 ring-accent/20"
-                  : "card-surface"
+              className={`card-surface rounded-[var(--radius)] p-8 transition ${
+                isPopular ? "card-surface-featured" : ""
               }`}
             >
-              {meta.featured && (
-                <span className="badge mb-4 text-accent-muted">{t("featured")}</span>
-              )}
+              <div className="mb-4 flex h-7 items-center">
+                {isPopular ? (
+                  <span className="badge-featured">{t("popular")}</span>
+                ) : null}
+              </div>
               <div className="font-mono-label text-sm text-muted">{t(`tiers.${key}.size`)}</div>
               <div className="mt-4 flex items-baseline gap-2">
                 <span className="font-display text-5xl text-accent-deep">{meta.price}</span>

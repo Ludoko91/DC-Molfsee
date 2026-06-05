@@ -85,7 +85,7 @@
         },
         "cooling": {
           "tag": "Cooling",
-          "value": "Cold/hot aisle",
+          "value": "In-Row Cooling",
           "note": "22 °C supply, free cooling 8 months a year — thanks, Schleswig-Holstein."
         },
         "network": {
@@ -104,8 +104,8 @@
       "eyebrow": "Pricing",
       "title": "Three numbers. That's it.",
       "lede": "No setup fees, no hidden line items. You pay for rack units and power — all prices net.",
-      "featured": "Popular",
       "month": "month",
+      "popular": "Popular",
       "tiers": {
         "perU": {
           "size": "1U",
@@ -181,12 +181,13 @@
       "lockedHint": "Fill all previous racks to {units}U to configure this rack.",
       "units": "{height}U",
       "fixedHeight": "Standard rack: {height}U",
-      "schematic": "Front elevation — full 47U cabinet",
-      "schematicCentered": "Colocation at U{start}–U{end} (centered in rack)",
+      "schematic": "3D preview — full 47U cabinet",
+      "schematicCentered": "3D preview — colocation at U{start}–U{end} (centered in rack)",
       "cabinetLabel": "{height}U Rack",
       "top": "Top",
       "bottom": "U1",
-      "allocated": "{units}U colocation"
+      "allocated": "{units}U colocation",
+      "dragHint": "Drag to rotate"
     },
     "power": {
       "title": "Summary",

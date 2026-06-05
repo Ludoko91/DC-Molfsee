@@ -1,123 +1,69 @@
 "use client";
 
-import { getAllocatedStartU } from "@/lib/rack/calculations";
-import { PER_U_PRICE_EUR, RACK_HEIGHT_U } from "@/lib/rack/types";
+import { Suspense, useMemo } from "react";
+import { Canvas } from "@react-three/fiber";
+import {
+  DEFAULT_MAX_POWER_KW,
+  DEFAULT_NEEDED_UNITS,
+  DEFAULT_POWER_FEEDS,
+  type RackConfig,
+} from "@/lib/rack/types";
+import {
+  RACK_CAMERA_FOV,
+  RACK_CAMERA_LOOK_Y,
+  RACK_CAMERA_Z,
+  RackScene3D,
+} from "@/components/rack/RackScene3D";
 
-const PREVIEW_UNITS = 10;
+const HERO_RACK: RackConfig = {
+  id: "hero-preview",
+  name: "Preview",
+  neededUnits: DEFAULT_NEEDED_UNITS,
+  maxPowerKw: DEFAULT_MAX_POWER_KW,
+  powerFeeds: DEFAULT_POWER_FEEDS,
+};
 
 export function HeroRack() {
-  const startU = getAllocatedStartU(PREVIEW_UNITS);
-  const endU = startU + PREVIEW_UNITS - 1;
-  const uHeight = 10;
-  const drawWidth = 200;
-  const padX = 36;
-  const padY = 28;
-  const totalHeight = RACK_HEIGHT_U * uHeight;
-  const svgWidth = drawWidth + padX * 2;
-  const svgHeight = totalHeight + padY * 2 + 40;
-
-  const selTopY = padY + (RACK_HEIGHT_U - endU) * uHeight;
-  const selHeight = PREVIEW_UNITS * uHeight;
+  const rack = useMemo(() => HERO_RACK, []);
 
   return (
-    <div className="relative mx-auto w-full max-w-[340px]">
-      <div className="card-surface relative overflow-hidden p-8">
+    <div className="relative mx-auto w-full max-w-[380px]">
+      <div className="card-surface relative overflow-hidden p-6 sm:p-8">
         <div
-          className="absolute inset-0 opacity-30"
+          className="pointer-events-none absolute inset-0 opacity-20"
           style={{
             background:
               "linear-gradient(135deg, var(--accent-light) 0%, transparent 50%, var(--sea) 100%)",
           }}
         />
 
-        <svg
-          viewBox={`0 0 ${svgWidth} ${svgHeight}`}
-          className="relative mx-auto w-full max-w-[260px]"
-          aria-hidden
-        >
-          <text
-            x={svgWidth / 2}
-            y="24"
-            textAnchor="middle"
-            fontSize="9"
-            fill="var(--accent-muted)"
-            letterSpacing="2"
-            className="font-mono-label"
+        <div className="relative mx-auto aspect-[4/5] w-full overflow-hidden rounded-[var(--radius)] border border-card-border bg-[#0b1220] shadow-[inset_0_1px_0_rgba(255,255,255,0.04)]">
+          <div
+            className="pointer-events-none absolute inset-0 z-10 opacity-60"
+            style={{
+              background:
+                "radial-gradient(ellipse at 50% 35%, rgba(34,211,238,0.14) 0%, transparent 60%), radial-gradient(ellipse at 50% 100%, rgba(13,92,92,0.25) 0%, transparent 55%)",
+            }}
+          />
+          <Canvas
+            shadows
+            dpr={[1, 2]}
+            camera={{
+              position: [0, RACK_CAMERA_LOOK_Y, RACK_CAMERA_Z],
+              fov: RACK_CAMERA_FOV,
+              near: 0.1,
+              far: 20,
+            }}
+            onCreated={({ camera }) => {
+              camera.lookAt(0, RACK_CAMERA_LOOK_Y, 0);
+            }}
+            gl={{ antialias: true, alpha: true }}
+            style={{ background: "transparent" }}
           >
-            FRONT ELEVATION · 47U
-          </text>
-
-          {Array.from({ length: RACK_HEIGHT_U }, (_, i) => {
-            const u = RACK_HEIGHT_U - i;
-            const y = padY + i * uHeight;
-            const isMajor = u % 5 === 0 || u === 1 || u === RACK_HEIGHT_U;
-            return isMajor ? (
-              <g key={u}>
-                <line
-                  x1={padX - 14}
-                  x2={padX - 4}
-                  y1={y}
-                  y2={y}
-                  stroke="rgba(13,92,92,0.3)"
-                  strokeWidth="0.5"
-                />
-                <text
-                  x={padX - 18}
-                  y={y + 3}
-                  textAnchor="end"
-                  fontSize="7"
-                  fill="rgba(13,92,92,0.45)"
-                  className="font-mono-label"
-                >
-                  {u}
-                </text>
-              </g>
-            ) : null;
-          })}
-
-          <rect
-            x={padX}
-            y={padY}
-            width={drawWidth}
-            height={totalHeight}
-            fill="none"
-            stroke="var(--accent)"
-            strokeWidth="1.5"
-            rx="2"
-          />
-
-          <rect
-            x={padX + 1}
-            y={selTopY}
-            width={drawWidth - 2}
-            height={selHeight}
-            fill="var(--accent-soft)"
-            stroke="var(--accent)"
-            strokeWidth="1"
-            rx="1"
-          />
-
-          {Array.from({ length: RACK_HEIGHT_U + 1 }, (_, i) => {
-            const y = padY + i * uHeight;
-            return (
-              <line
-                key={i}
-                x1={padX}
-                x2={padX + drawWidth}
-                y1={y}
-                y2={y}
-                stroke="rgba(13,92,92,0.08)"
-                strokeWidth="0.5"
-              />
-            );
-          })}
-        </svg>
-
-        <div className="absolute -right-2 top-1/2 translate-x-1/4 rounded-[var(--radius)] bg-accent px-3 py-2 font-mono-label text-[10px] text-white shadow-[var(--shadow-md)] sm:right-2">
-          <div className="opacity-80">U{startU} — U{endU}</div>
-          <div className="font-medium">
-            {PREVIEW_UNITS}U · {PREVIEW_UNITS * PER_U_PRICE_EUR} €/mo
-          </div>
+            <Suspense fallback={null}>
+              <RackScene3D rack={rack} />
+            </Suspense>
+          </Canvas>
         </div>
       </div>
     </div>

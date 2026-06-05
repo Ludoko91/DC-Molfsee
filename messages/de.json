@@ -61,7 +61,7 @@
       "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
       "title1": "Rackplatz",
       "title2": "aus dem Norden",
-      "title3": "für Jedermann.",
+      "title3": "für den Norden.",
       "tagline": "Colocation mit norddeutscher Zuverlässigkeit.",
       "lede": "Wir betreiben ein modernes Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
       "cta": "Rack konfigurieren",
@@ -76,7 +76,7 @@
     "facility": {
       "eyebrow": "Die Anlage",
       "title": "Klein genug, dass wir dich beim Namen kennen.",
-      "lede": "Ein Raum mit 11 Racks, ehrliche Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind der, der dich am Telefon erkennt.",
+      "lede": "Ein Raum mit 11 Racks, moderner Technik. Wir sind nicht der größte Datacenter Norddeutschlands — wir sind die, die dich am Telefon erkennt.",
       "cards": {
         "power": {
           "tag": "Strom",
@@ -85,13 +85,13 @@
         },
         "cooling": {
           "tag": "Kühlung",
-          "value": "Kalt/Warm-Gang",
+          "value": "In-Row Cooling",
           "note": "22 °C Vorlauf, freie Kühlung 8 Monate im Jahr — Schleswig-Holstein sei Dank."
         },
         "network": {
           "tag": "Netzwerk",
           "value": "Dual-Carrier",
-          "note": "10 Gbit/s Uplinks, BGP-fähig, DE-CIX Hamburg via dunkler Faser."
+          "note": "10 Gbit/s Uplinks, BGP-fähig, DE-CIX Hamburg via dark fiber."
         },
         "access": {
           "tag": "Zutritt",
@@ -104,8 +104,8 @@
       "eyebrow": "Preise",
       "title": "Drei Zahlen. Mehr nicht.",
       "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten, Strom und Powerfeeds— alle Preise netto.",
-      "featured": "Beliebt",
       "month": "Monat",
+      "popular": "Beliebt",
       "tiers": {
         "perU": {
           "size": "1 HE",
@@ -113,18 +113,18 @@
         },
         "half": {
           "size": "Half Rack · 24 HE",
-          "note": "Genug für den eigenen kleinen Cluster."
+          "note": "Genug für dein eignes kleines Cluster."
         },
         "full": {
           "size": "Full Rack · 47 HE",
-          "note": "Eigene PDU, eigener Schlüssel."
+          "note": "Deine eigenes Rack, dein eigener Schlüssel."
         }
       },
       "extras": {
         "power": {
           "label": "Strom",
-          "value": "Konfigurierbar",
-          "note": "kW-Bedarf im Konfigurator festlegen"
+          "value": "200€ / Powerfeed (1 inklusive)",
+          "note": "Konfiguriere deinen kW-Bedarf im Konfigurator."
         },
         "bandwidth": {
           "label": "Bandbreite",
@@ -151,7 +151,7 @@
       }
     },
     "cta": {
-      "title": "Bereit, dein Blech einzubuchen?",
+      "title": "Bereit, deinen Server einzubuchen?",
       "lede": "Konfiguriere deinen Platz in zwei Minuten. Transparente Netto-Preise, live Rack-Vorschau.",
       "button": "Jetzt konfigurieren"
     }
@@ -181,12 +181,13 @@
       "lockedHint": "Alle vorherigen Racks auf {units} HE füllen, um dieses Rack zu konfigurieren.",
       "units": "{height}U",
       "fixedHeight": "Standard-Rack: {height}U",
-      "schematic": "Frontansicht — vollständiges 47U Gehäuse",
-      "schematicCentered": "Colocation bei U{start}–U{end} (zentriert im Rack)",
+      "schematic": "3D-Vorschau — vollständiges 47U Gehäuse",
+      "schematicCentered": "3D-Vorschau — Colocation bei U{start}–U{end} (zentriert im Rack)",
       "cabinetLabel": "{height}U Rack",
       "top": "Oben",
       "bottom": "U1",
-      "allocated": "{units}U Colocation"
+      "allocated": "{units}U Colocation",
+      "dragHint": "Ziehen zum Drehen"
     },
     "power": {
       "title": "Übersicht",

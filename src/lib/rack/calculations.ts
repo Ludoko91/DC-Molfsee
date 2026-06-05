@@ -51,6 +51,24 @@ export function getAllocatedStartU(neededUnits: number): number {
   return Math.floor((RACK_HEIGHT_U - neededUnits) / 2) + 1;
 }
 
+const EQUIPMENT_UNIT_SIZES = [4, 2, 1] as const;
+
+/** Split needed rack units into visual equipment blocks of 4U, 2U, or 1U. */
+export function decomposeNeededUnits(neededUnits: number): number[] {
+  if (neededUnits <= 0) return [];
+
+  const blocks: number[] = [];
+  let remaining = neededUnits;
+
+  while (remaining > 0) {
+    const size = EQUIPMENT_UNIT_SIZES.find((s) => s <= remaining) ?? 1;
+    blocks.push(size);
+    remaining -= size;
+  }
+
+  return blocks;
+}
+
 export function getOccupiedUnits(rack: RackConfig): Set<number> {
   const occupied = new Set<number>();
   const startU = getAllocatedStartU(rack.neededUnits);

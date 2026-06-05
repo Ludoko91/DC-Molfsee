@@ -88,6 +88,21 @@ body {
   color: var(--muted);
 }
 
+.badge-featured {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  border: 1px solid var(--warning);
+  background: color-mix(in srgb, var(--warning) 10%, white);
+  padding: 6px 14px;
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--warning);
+}
+
 .eyebrow {
   display: flex;
   align-items: center;
@@ -181,6 +196,14 @@ body {
 
 .card-surface:hover {
   border-color: rgba(13, 92, 92, 0.22);
+}
+
+.card-surface.card-surface-featured {
+  border-color: var(--warning);
+}
+
+.card-surface.card-surface-featured:hover {
+  border-color: var(--warning);
 }
 
 .hero-scene {
