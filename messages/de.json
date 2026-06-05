@@ -16,6 +16,13 @@
     "hours": "Mo–Fr · 08:00–17:00",
     "availability": "24/7 Zutritt nach Vereinbarung"
   },
+  "construction": {
+    "banner": "Im Aufbau",
+    "bannerDetail": "Das Rechenzentrum in Molfsee ist noch nicht betriebsbereit. Preise und Konfigurationen können Sie schon erkunden. Buchungen sind erst nach Fertigstellung möglich.",
+    "configuratorTitle": "Nur Vorschau — Anlage im Aufbau",
+    "configuratorBody": "Verfügbarkeit und Preise sind Planungswerte. Buchungen sind erst möglich, wenn der Standort fertig ist.",
+    "contactHint": "Kontakt ist vorerst nur zur Interessensbekundung — die Anlage befindet sich im Aufbau."
+  },
   "footer": {
     "tagline": "Bezahlbarer Colocation-Standort in Molfsee — betrieben von Menschen, die wissen, wo das Backup liegt.",
     "copyright": "© {year} ComputeNord Datacenter. Alle Rechte vorbehalten.",
@@ -54,13 +61,13 @@
       "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
       "title1": "Rackplatz",
       "title2": "aus dem Norden",
-      "title3": "für Homelabs.",
+      "title3": "für Jedermann.",
       "tagline": "Colocation mit norddeutscher Zuverlässigkeit.",
-      "lede": "Wir betreiben einen kleinen, ehrlichen Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
-      "cta": "Platz konfigurieren",
+      "lede": "Wir betreiben ein modernes Datacenter direkt vor den Toren Kiels. Keine Enterprise-Aufschläge, kein Vertriebs-Theater. Nur Strom, Kühlung, Bandbreite und ein 47HE-Rack mit deinem Namen drauf.",
+      "cta": "Rack konfigurieren",
       "secondary": "Preise ansehen",
       "stats": {
-        "facility": { "label": "Anlage", "value": "Tier 2/3" },
+        "facility": { "label": "Anlage", "value": "Tier 3" },
         "location": { "label": "Standort", "value": "Molfsee · DE" },
         "available": { "label": "Verfügbar", "value": "47 HE / Rack" },
         "from": { "label": "Ab", "value": "12 € / HE" }
@@ -96,7 +103,7 @@
     "pricing": {
       "eyebrow": "Preise",
       "title": "Drei Zahlen. Mehr nicht.",
-      "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten und Strom — alle Preise netto.",
+      "lede": "Keine Setup-Gebühren, keine versteckten Posten. Du zahlst für Rack-Einheiten, Strom und Powerfeeds— alle Preise netto.",
       "featured": "Beliebt",
       "month": "Monat",
       "tiers": {
@@ -135,7 +142,7 @@
     "location": {
       "eyebrow": "Standort",
       "title": "Molfsee, 10 Minuten südlich von Kiel.",
-      "lede": "Direkt an der A215. Aus Hamburg in 75 Minuten, aus Kopenhagen mit der Fähre. Wir öffnen die Tür, du stellst dein Blech rein.",
+      "lede": "Direkt an der A215. Aus Hamburg in 75 Minuten, aus Kopenhagen mit der Fähre. Wir öffnen die Tür, du stellst deine Server rein.",
       "address": {
         "0": "Datacenter Molfsee",
         "1": "Rendsburger Landstraße 142",

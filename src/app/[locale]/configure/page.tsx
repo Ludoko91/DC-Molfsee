@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { RackBuilder } from "@/components/rack/RackBuilder";
+import { ConstructionNotice } from "@/components/rack/ConstructionNotice";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -22,6 +23,7 @@ export default async function ConfigurePage({ params }: Props) {
     <div className="page-header">
       <div className="section-padding !pb-10 !pt-10">
         <ConfigureHeader />
+        <ConstructionNotice />
         <RackBuilder />
       </div>
     </div>

@@ -16,6 +16,13 @@
     "hours": "Mon–Fri · 08:00–17:00",
     "availability": "24/7 access by arrangement"
   },
+  "construction": {
+    "banner": "Under construction",
+    "bannerDetail": "The Molfsee datacenter is not operational yet. Feel free to explore pricing and configurations. Bookings open once construction is complete.",
+    "configuratorTitle": "Preview only — facility under construction",
+    "configuratorBody": "Rack availability and prices shown here are planning figures. We cannot accept bookings until the site is ready.",
+    "contactHint": "Contact is for interest only while the facility is under construction."
+  },
   "footer": {
     "tagline": "Affordable colocation in Molfsee — run by people who know where the backup lives.",
     "copyright": "© {year} ComputeNord Datacenter. All rights reserved.",
@@ -54,13 +61,13 @@
       "eyebrow": "Tier 3 Colocation · Molfsee, Schleswig-Holstein",
       "title1": "Rack space",
       "title2": "from the North",
-      "title3": "for homelabs.",
+      "title3": "for everyone.",
       "tagline": "Colocation with northern reliability.",
-      "lede": "We run a small, honest data center just south of Kiel. No enterprise markup, no sales theatre. Just power, cooling, bandwidth, and a 47U rack with your name on it.",
+      "lede": "We run a modern data center just south of Kiel. No enterprise markup, no sales theatre. Just power, cooling, bandwidth, and a 47U rack with your name on it.",
       "cta": "Configure your space",
       "secondary": "See pricing",
       "stats": {
-        "facility": { "label": "Facility", "value": "Tier 2/3" },
+        "facility": { "label": "Facility", "value": "Tier 3" },
         "location": { "label": "Location", "value": "Molfsee · DE" },
         "available": { "label": "Available", "value": "47U per rack" },
         "from": { "label": "From", "value": "€12 / U" }

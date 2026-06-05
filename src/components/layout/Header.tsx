@@ -21,7 +21,7 @@ export function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50">
+    <header>
       <div className="border-b border-card-border bg-[var(--accent-light)]/60">
         <div className="mx-auto flex max-w-[1280px] flex-wrap items-center justify-between gap-2 px-6 py-2 text-xs text-muted sm:px-10">
           <div className="flex flex-wrap items-center gap-4">

@@ -1,19 +1,22 @@
 export function LocationMap() {
   // Stuthagen 23, 24113 Molfsee (OSM Nominatim): 54.2680182, 10.0707590
   // Using OpenStreetMap embed (no API key needed).
-  const bbox = {
-    left: 10.060759,
-    bottom: 54.2580182,
-    right: 10.080759,
-    top: 54.2780182,
-  };
   const marker = { lat: 54.2680182, lon: 10.070759 };
+  const zoomFactor = 9;
+  const lonHalf = 0.01 * zoomFactor;
+  const latHalf = 0.01 * zoomFactor;
+  const bbox = {
+    left: marker.lon - lonHalf,
+    bottom: marker.lat - latHalf,
+    right: marker.lon + lonHalf,
+    top: marker.lat + latHalf,
+  };
 
   const src = `https://www.openstreetmap.org/export/embed.html?bbox=${encodeURIComponent(
     `${bbox.left},${bbox.bottom},${bbox.right},${bbox.top}`,
   )}&layer=mapnik&marker=${encodeURIComponent(`${marker.lat},${marker.lon}`)}`;
 
-  const link = `https://www.openstreetmap.org/?mlat=${marker.lat}&mlon=${marker.lon}#map=16/${marker.lat}/${marker.lon}`;
+  const link = `https://www.openstreetmap.org/?mlat=${marker.lat}&mlon=${marker.lon}#map=14/${marker.lat}/${marker.lon}`;
 
   return (
     <div className="relative h-full w-full overflow-hidden rounded-[var(--radius)] border border-card-border bg-card">

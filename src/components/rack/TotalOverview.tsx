@@ -14,6 +14,7 @@ type Props = {
 
 export function TotalOverview({ racks }: Props) {
   const t = useTranslations("configure");
+  const tConstruction = useTranslations("construction");
   const locale = useLocale();
   const router = useRouter();
   const numberLocale = locale === "de" ? "de-DE" : "en-IE";
@@ -77,7 +78,10 @@ export function TotalOverview({ racks }: Props) {
       </div>
 
       <div className="mt-5 flex flex-col gap-2 border-t border-card-border pt-5 sm:flex-row sm:items-center sm:justify-between">
-        <p className="text-xs text-muted">{t("overview.email.hint")}</p>
+        <div className="space-y-1">
+          <p className="text-xs text-muted">{t("overview.email.hint")}</p>
+          <p className="text-xs text-warning">{tConstruction("contactHint")}</p>
+        </div>
         <button
           type="button"
           onClick={handleContactClick}
