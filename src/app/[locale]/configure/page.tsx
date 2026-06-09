@@ -1,6 +1,5 @@
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { RackBuilder } from "@/components/rack/RackBuilder";
-import { ConstructionNotice } from "@/components/rack/ConstructionNotice";
+import { RackConfiguratorWizard } from "@/components/rack/RackConfiguratorWizard";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -21,25 +20,9 @@ export default async function ConfigurePage({ params }: Props) {
 
   return (
     <div className="page-header">
-      <div className="section-padding !pb-10 !pt-10">
-        <ConfigureHeader />
-        <ConstructionNotice />
-        <RackBuilder />
+      <div className="section-padding !pb-10 !pt-4">
+        <RackConfiguratorWizard />
       </div>
-    </div>
-  );
-}
-
-async function ConfigureHeader() {
-  const t = await getTranslations("configure");
-
-  return (
-    <div className="mb-10 max-w-2xl">
-      <div className="eyebrow">{t("title")}</div>
-      <h1 className="font-display text-4xl leading-tight text-foreground sm:text-5xl">
-        {t("title")}
-      </h1>
-      <p className="mt-4 text-lg text-foreground-muted">{t("subtitle")}</p>
     </div>
   );
 }

@@ -189,6 +189,18 @@
       "allocated": "{units}U colocation",
       "dragHint": "Drag to rotate"
     },
+    "rackSize": {
+      "u1": "1U",
+      "u2": "2U",
+      "u4": "4U",
+      "eighth": "⅛ rack",
+      "quarter": "¼ rack",
+      "half": "½ rack",
+      "threeQuarter": "¾ rack",
+      "full": "Full rack",
+      "customLabel": "Custom size",
+      "customHint": "Enter between {min} and {max} U"
+    },
     "power": {
       "title": "Summary",
       "kwUnit": "kW",
@@ -226,6 +238,24 @@
         "half": "Half rack (24U): {price} € net",
         "perU": "Single U: {price} € net each"
       }
+    },
+    "wizard": {
+      "subtitle": "Configure your racks step by step — size, power, and feeds per rack.",
+      "steps": {
+        "size": "Rack size",
+        "power": "Max power",
+        "feeds": "Power feed",
+        "review": "Review"
+      },
+      "back": "Back",
+      "next": "Next",
+      "stepOf": "Step {current} of {total}",
+      "sizeDescription": "Pick a preset size or enter a custom number of rack units in the 47U cabinet.",
+      "powerDescription": "Set the maximum power draw for your equipment.",
+      "feedsDescription": "Select redundant power feeds — each feed provides 3.5 kW.",
+      "reviewDescription": "Review your configuration and estimated monthly cost before contacting us.",
+      "classicLink": "Prefer the classic view?",
+      "steppedLink": "Try the step-by-step configurator"
     }
   },
   "language": {

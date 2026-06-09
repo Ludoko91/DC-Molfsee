@@ -6,13 +6,14 @@ import { calculateTotalSummary } from "@/lib/rack/calculations";
 import { formatEur } from "@/lib/format";
 import type { RackConfig } from "@/lib/rack/types";
 import { encodeSharedRackConfig } from "@/lib/rack/share";
-import { generateId } from "@/lib/utils";
+import { generateId, cn } from "@/lib/utils";
 
 type Props = {
   racks: RackConfig[];
+  className?: string;
 };
 
-export function TotalOverview({ racks }: Props) {
+export function TotalOverview({ racks, className }: Props) {
   const t = useTranslations("configure");
   const tConstruction = useTranslations("construction");
   const locale = useLocale();
@@ -42,7 +43,7 @@ export function TotalOverview({ racks }: Props) {
   }
 
   return (
-    <section className="card-surface mt-8 p-5 sm:p-6">
+    <section className={cn("card-surface mt-8 p-5 sm:p-6", className)}>
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
         <div>
           <h2 className="font-semibold text-foreground">{t("overview.title")}</h2>

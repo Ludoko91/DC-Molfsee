@@ -189,6 +189,18 @@
       "allocated": "{units}U Colocation",
       "dragHint": "Ziehen zum Drehen"
     },
+    "rackSize": {
+      "u1": "1U",
+      "u2": "2U",
+      "u4": "4U",
+      "eighth": "⅛ Rack",
+      "quarter": "¼ Rack",
+      "half": "½ Rack",
+      "threeQuarter": "¾ Rack",
+      "full": "Ganzes Rack",
+      "customLabel": "Individuelle Größe",
+      "customHint": "Zwischen {min} und {max} HE eingeben"
+    },
     "power": {
       "title": "Übersicht",
       "kwUnit": "kW",
@@ -226,6 +238,24 @@
         "half": "Half Rack (24U): {price} € netto",
         "perU": "Einzel-U: {price} € netto je U"
       }
+    },
+    "wizard": {
+      "subtitle": "Konfigurieren Sie Ihre Racks Schritt für Schritt — Größe, Leistung und Zuführungen pro Rack.",
+      "steps": {
+        "size": "Rack-Größe",
+        "power": "Max. Leistung",
+        "feeds": "Stromzufuhr",
+        "review": "Übersicht"
+      },
+      "back": "Zurück",
+      "next": "Weiter",
+      "stepOf": "Schritt {current} von {total}",
+      "sizeDescription": "Wählen Sie eine Standardgröße oder geben Sie eine individuelle Anzahl Rack-Einheiten im 47U-Gehäuse ein.",
+      "powerDescription": "Legen Sie die maximale Leistungsaufnahme Ihrer Hardware fest.",
+      "feedsDescription": "Wählen Sie redundante Stromzuführungen — jede Zufuhr liefert 3,5 kW.",
+      "reviewDescription": "Prüfen Sie Ihre Konfiguration und den geschätzten Monatspreis, bevor Sie uns kontaktieren.",
+      "classicLink": "Lieber die klassische Ansicht?",
+      "steppedLink": "Schritt-für-Schritt-Konfigurator ausprobieren"
     }
   },
   "language": {

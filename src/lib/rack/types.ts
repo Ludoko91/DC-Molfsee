@@ -42,10 +42,24 @@ export type TotalSummary = {
 
 export const RACK_HEIGHT_U = 47;
 export const HALF_RACK_UNITS = 24;
+export const QUARTER_RACK_UNITS = Math.round(RACK_HEIGHT_U / 4);
+export const EIGHTH_RACK_UNITS = Math.round(RACK_HEIGHT_U / 8);
+export const THREE_QUARTER_RACK_UNITS = Math.round((RACK_HEIGHT_U * 3) / 4);
+
+export const RACK_SIZE_PRESET_UNITS = [
+  1,
+  2,
+  4,
+  EIGHTH_RACK_UNITS,
+  QUARTER_RACK_UNITS,
+  HALF_RACK_UNITS,
+  THREE_QUARTER_RACK_UNITS,
+  RACK_HEIGHT_U,
+] as const;
 export const FULL_RACK_PRICE_EUR = 300;
 export const HALF_RACK_PRICE_EUR = 180;
 export const PER_U_PRICE_EUR = 12;
-export const POWER_FEED_KW = 3.8;
+export const POWER_FEED_KW = 3.5;
 export const POWER_FEED_EXTRA_PRICE_EUR = 200;
 export const SLOT_HEIGHT_PX = 14;
 export const DEFAULT_NEEDED_UNITS = 10;
